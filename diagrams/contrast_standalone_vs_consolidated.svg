@@ -1,160 +1,202 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="560" viewBox="0 0 920 560">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="580" viewBox="0 0 960 580">
   <defs>
     <style>
-      .t { font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif; fill: #202124; }
-      .title { font-weight: 950; font-size: 22px; }
-      .label { font-weight: 900; font-size: 18px; }
-      .sub { font-weight: 700; font-size: 14px; fill: #5f6368; }
-      .note { font-weight: 750; font-size: 15px; fill: rgba(32,33,36,0.86); }
-      .pill { font-weight: 900; font-size: 14px; }
+      .t { font-family: "Noto Sans JP","Hiragino Sans","Yu Gothic","Meiryo",sans-serif; }
 
-      .stroke { stroke: rgba(60, 64, 67, 0.18); stroke-width: 2; }
-      .soft { fill: #ffffff; }
-      .card { fill: #f7f8f9; stroke: rgba(60, 64, 67, 0.14); stroke-width: 2; }
-      .arrow { stroke: rgba(95, 99, 104, 0.78); stroke-width: 6; stroke-linecap: round; }
-      .icon-stroke { stroke: #202124; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-      .fill-white { fill: #ffffff; }
+      /* Type scale */
+      .title { font-weight: 900; font-size: 24px; fill: #ffffff; letter-spacing: 0.01em; }
+      .title-sub { font-weight: 600; font-size: 16px; }
+      .desc { font-weight: 700; font-size: 16px; fill: #3c4043; }
+      .step { font-weight: 900; font-size: 18px; fill: #202124; }
+      .step-sub { font-weight: 700; font-size: 13px; fill: #5f6368; }
+      .pill-text { font-weight: 900; font-size: 14px; letter-spacing: 0.01em; }
+      .chip-text { font-weight: 900; font-size: 13px; letter-spacing: 0.01em; }
+
+      /* Card */
+      .card { fill: #ffffff; filter: url(#dropShadow); }
+      .card-border { fill: none; stroke: #dadce0; stroke-width: 1.25; }
+      .header-standalone { fill: #5f6368; }
+      .header-consolidated { fill: #1a73e8; }
+      .divider { stroke: #e8eaed; stroke-width: 2; }
+
+      /* Boxes */
+      .box { fill: #ffffff; stroke: #dadce0; stroke-width: 2; }
+      .box-soft { fill: #f8f9fa; stroke: #dadce0; stroke-width: 2; }
+      .box-final { fill: #f1f3f4; stroke: #c6cacf; stroke-width: 2; }
+      .box-blue { fill: #e8f0fe; stroke: #8ab4f8; stroke-width: 2; }
+      .box-final-blue { fill: #d2e3fc; stroke: #669df6; stroke-width: 2; }
+
+      /* Arrows */
+      .arrow { stroke-width: 4; fill: none; stroke-linecap: round; }
+      .arrow-grey { stroke: #9aa0a6; marker-end: url(#arrowHeadGrey); }
+      .arrow-blue { stroke: #669df6; marker-end: url(#arrowHeadBlue); }
+      .arrow-blue-dash { stroke: #669df6; stroke-dasharray: 6 6; marker-end: url(#arrowHeadBlue); }
+      .arrow-grey-dash { stroke: #9aa0a6; stroke-dasharray: 6 6; marker-end: url(#arrowHeadGrey); }
+
+      /* Icons */
+      .icon-grey { fill: #5f6368; color: #5f6368; }
+      .icon-blue { fill: #1a73e8; color: #1a73e8; }
+      .icon-red { fill: #ea4335; color: #ea4335; }
     </style>
 
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#202124" flood-opacity="0.12"/>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#3c4043" flood-opacity="0.14"/>
     </filter>
 
-    <!-- Diary -->
-    <symbol id="icon-diary" viewBox="0 0 64 64">
-      <rect x="14" y="10" width="36" height="44" rx="8" fill="#ffffff" class="icon-stroke"/>
-      <rect x="14" y="10" width="10" height="44" rx="8" fill="#1a73e8" opacity="0.14"/>
-      <rect x="28" y="18" width="18" height="4" rx="2" fill="#1a73e8" opacity="0.22"/>
-      <rect x="28" y="28" width="16" height="4" rx="2" fill="#1a73e8" opacity="0.18"/>
-      <rect x="28" y="38" width="14" height="4" rx="2" fill="#1a73e8" opacity="0.18"/>
+    <!-- Marker heads (fixed size, not scaled by strokeWidth) -->
+    <marker id="arrowHeadGrey" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9aa0a6"/>
+    </marker>
+
+    <marker id="arrowHeadBlue" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#669df6"/>
+    </marker>
+
+    <!-- Icons (base: Material-like solid) -->
+    <symbol id="icon-diary" viewBox="0 0 24 24">
+      <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z" fill-opacity="0.2"/>
+      <path d="M19 3H6c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 13H8v-2h6v2zm3-4H8v-2h9v2zm0-4H8V6h9v2z"/>
     </symbol>
 
-    <!-- Ledger -->
-    <symbol id="icon-ledger" viewBox="0 0 64 64">
-      <rect x="10" y="14" width="40" height="40" rx="10" fill="#ffffff" class="icon-stroke" opacity="0.85"/>
-      <rect x="14" y="10" width="40" height="40" rx="10" fill="#ffffff" class="icon-stroke" opacity="0.95"/>
-      <rect x="18" y="6" width="40" height="40" rx="10" fill="#ffffff" class="icon-stroke"/>
-      <rect x="22" y="16" width="10" height="20" rx="5" fill="#1a73e8" opacity="0.14"/>
-      <rect x="36" y="18" width="16" height="4" rx="2" fill="#1a73e8" opacity="0.18"/>
-      <rect x="36" y="28" width="14" height="4" rx="2" fill="#1a73e8" opacity="0.18"/>
+    <symbol id="icon-ledger" viewBox="0 0 24 24">
+      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
     </symbol>
 
-    <!-- Document -->
-    <symbol id="icon-doc" viewBox="0 0 64 64">
-      <rect x="16" y="10" width="34" height="44" rx="8" fill="#ffffff" class="icon-stroke"/>
-      <path d="M42 10v10h10" fill="#ffffff" class="icon-stroke"/>
-      <rect x="22" y="26" width="22" height="4" rx="2" fill="#1a73e8" opacity="0.18"/>
-      <rect x="22" y="34" width="18" height="4" rx="2" fill="#1a73e8" opacity="0.18"/>
-      <rect x="22" y="42" width="20" height="4" rx="2" fill="#1a73e8" opacity="0.18"/>
+    <symbol id="icon-report" viewBox="0 0 24 24">
+      <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
     </symbol>
 
-    <!-- Gather -->
-    <symbol id="icon-gather" viewBox="0 0 64 64">
-      <rect x="22" y="38" width="20" height="14" rx="6" fill="#ffffff" class="icon-stroke"/>
-      <path d="M22 42h20" fill="none" class="icon-stroke" opacity="0.7"/>
-      <rect x="8" y="10" width="18" height="22" rx="6" fill="#ffffff" class="icon-stroke" opacity="0.95"/>
-      <rect x="38" y="10" width="18" height="22" rx="6" fill="#ffffff" class="icon-stroke" opacity="0.95"/>
-      <rect x="23" y="6" width="18" height="22" rx="6" fill="#ffffff" class="icon-stroke"/>
-      <path d="M17 34v6" fill="none" class="icon-stroke"/>
-      <path d="M47 34v6" fill="none" class="icon-stroke"/>
-      <path d="M32 30v6" fill="none" class="icon-stroke"/>
-      <polygon points="17,44 12,38 22,38" fill="#1a73e8" opacity="0.24"/>
-      <polygon points="47,44 42,38 52,38" fill="#1a73e8" opacity="0.24"/>
-      <polygon points="32,44 27,38 37,38" fill="#1a73e8" opacity="0.24"/>
+    <symbol id="icon-gather" viewBox="0 0 24 24">
+      <path d="M4 14h4v4H4zM4 6h4v4H4zM10 8h7l-3 3 3 3h-7V8z" opacity="0.8"/>
+      <path d="M20 10v4h-4v-4h4m2-2h-8v8h8V8zM16 16v4h-6v-4h6m2-2H8v8h10v-8z" fill-rule="evenodd"/>
     </symbol>
 
-    <!-- Sum & Adjust (Sigma) -->
-    <symbol id="icon-sigma" viewBox="0 0 64 64">
-      <circle cx="32" cy="32" r="22" fill="#ffffff" class="icon-stroke"/>
-      <text x="32" y="40" text-anchor="middle" font-size="30" font-weight="950" fill="#1a73e8">Σ</text>
-      <path d="M16 48h8" fill="none" class="icon-stroke" opacity="0.55"/>
-      <path d="M40 16h8" fill="none" class="icon-stroke" opacity="0.55"/>
-      <circle cx="24" cy="48" r="2.8" fill="#ea4335" opacity="0.75"/>
-      <circle cx="40" cy="16" r="2.8" fill="#ea4335" opacity="0.75"/>
+    <!-- Simplified "merge/adjust" icon (monochrome, low noise) -->
+    <symbol id="icon-merge" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="6" height="3" rx="1" opacity="0.35"/>
+      <rect x="3" y="10.5" width="6" height="3" rx="1" opacity="0.55"/>
+      <rect x="3" y="16" width="6" height="3" rx="1" opacity="0.75"/>
+      <path d="M10 12h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M13.5 9.5 L16 12 L13.5 14.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="17" y="7" width="4" height="10" rx="1.2" opacity="0.9"/>
     </symbol>
 
-    <!-- Reset -->
-    <symbol id="icon-reset" viewBox="0 0 64 64">
-      <path d="M50 26c-3-9-12-14-22-12-7 2-12 8-13 15" fill="none" class="icon-stroke"/>
-      <path d="M14 22v10h10" fill="none" class="icon-stroke"/>
-      <path d="M14 42c3 9 12 14 22 12 7-2 12-8 13-15" fill="none" class="icon-stroke"/>
-      <path d="M50 46V36H40" fill="none" class="icon-stroke"/>
+    <symbol id="icon-puzzle" viewBox="0 0 24 24">
+      <path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z"/>
     </symbol>
 
-    <!-- Puzzle -->
-    <symbol id="icon-puzzle" viewBox="0 0 64 64">
-      <path d="M24 18h10c0-4 4-6 7-4 3 2 3 7-1 8v10h-10c1 4-2 8-6 8s-7-4-6-8H8V20c4 1 8-2 8-6s-4-7-8-6V18h16z"
-            fill="#ffffff" class="icon-stroke"/>
-      <path d="M24 18h10c0-4 4-6 7-4 3 2 3 7-1 8v10h-10c1 4-2 8-6 8s-7-4-6-8H8V20c4 1 8-2 8-6s-4-7-8-6V18h16z"
-            fill="#1a73e8" opacity="0.12"/>
+    <symbol id="icon-reset" viewBox="0 0 24 24">
+      <path d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"/>
+    </symbol>
+
+    <!-- No-ledger icon: ledger + red slash -->
+    <symbol id="icon-no-ledger" viewBox="0 0 24 24">
+      <use href="#icon-ledger" x="0" y="0" width="24" height="24"/>
+      <path d="M5 19 L19 5" stroke="#ea4335" stroke-width="2.4" stroke-linecap="round"/>
     </symbol>
   </defs>
 
-  <!-- Lane: Standalone -->
-  <rect x="40" y="40" width="840" height="220" rx="22" class="soft" filter="url(#softShadow)"/>
-  <rect x="40" y="40" width="840" height="220" rx="22" fill="none" class="stroke"/>
-  <path d="M40 92 L40 62 Q40 40 62 40 L858 40 Q880 40 880 62 L880 92 Z" fill="rgba(95,99,104,0.82)"/>
-  <text class="t title fill-white" x="70" y="74">単体会計（積み上げ式）</text>
-  <text class="t note" x="70" y="232">仕訳が元帳に積み上がり、そのまま決算書へ</text>
+  <!-- Standalone card -->
+  <g transform="translate(40,24)">
+    <rect width="880" height="240" rx="18" class="card"/>
+    <rect width="880" height="240" rx="18" class="card-border"/>
+    <path d="M0,18 Q0,0 18,0 H862 Q880,0 880,18 V56 H0 Z" class="header-standalone"/>
 
-  <!-- Steps (minimal text) -->
-  <rect x="70" y="112" width="220" height="90" rx="18" class="card"/>
-  <use href="#icon-diary" x="92" y="124" width="56" height="56"/>
-  <text class="t label" x="164" y="152">日々仕訳</text>
+    <text x="24" y="38" class="t title">単体会計 <tspan class="title-sub" fill="#e8eaed">（積み上げ）</tspan></text>
+    <text x="24" y="84" class="t desc">仕訳が元帳に積み上がり → そのまま決算書へ</text>
 
-  <line x1="300" y1="156" x2="340" y2="156" class="arrow"/>
-  <polygon points="356,156 340,146 340,166" fill="rgba(95,99,104,0.78)"/>
+    <line x1="636" y1="108" x2="636" y2="216" class="divider"/>
 
-  <rect x="370" y="112" width="220" height="90" rx="18" class="card"/>
-  <use href="#icon-ledger" x="392" y="124" width="56" height="56"/>
-  <text class="t label" x="464" y="152">元帳</text>
+    <!-- flow (left column) -->
+    <g transform="translate(24,112)">
+      <rect width="176" height="88" rx="14" class="box"/>
+      <use href="#icon-diary" x="18" y="24" width="40" height="40" class="icon-grey"/>
+      <text x="76" y="52" class="t step">日々仕訳</text>
 
-  <line x1="600" y1="156" x2="640" y2="156" class="arrow"/>
-  <polygon points="656,156 640,146 640,166" fill="rgba(95,99,104,0.78)"/>
+      <line x1="185" y1="44" x2="203" y2="44" class="arrow arrow-grey"/>
 
-  <rect x="670" y="112" width="180" height="90" rx="18" fill="#F1F6FF" stroke="#8AB4F8" stroke-width="2"/>
-  <use href="#icon-doc" x="688" y="124" width="56" height="56"/>
-  <text class="t label" x="760" y="152">決算書</text>
-  <text class="t sub" x="760" y="176">（個別FS）</text>
+      <g transform="translate(212,0)">
+        <rect width="176" height="88" rx="14" class="box-soft"/>
+        <use href="#icon-ledger" x="18" y="24" width="40" height="40" class="icon-grey"/>
+        <text x="76" y="52" class="t step">元帳</text>
+      </g>
 
-  <rect x="670" y="210" width="180" height="36" rx="18" fill="rgba(26,115,232,0.08)" stroke="rgba(26,115,232,0.28)" stroke-width="2"/>
-  <use href="#icon-diary" x="684" y="215" width="28" height="28"/>
-  <text class="t pill" x="760" y="234" text-anchor="middle" fill="#185abc">日記（毎日書く）</text>
+      <line x1="397" y1="44" x2="415" y2="44" class="arrow arrow-grey"/>
 
-  <!-- Lane: Consolidated -->
-  <rect x="40" y="300" width="840" height="220" rx="22" class="soft" filter="url(#softShadow)"/>
-  <rect x="40" y="300" width="840" height="220" rx="22" fill="none" class="stroke"/>
-  <path d="M40 352 L40 322 Q40 300 62 300 L858 300 Q880 300 880 322 L880 352 Z" fill="#185abc"/>
-  <text class="t title fill-white" x="70" y="334">連結会計（組立式）</text>
-  <text class="t sub" x="70" y="372" fill="#EA4335">× 連結帳簿（存在しない）</text>
-  <text class="t note" x="70" y="492">期末に集めてゼロから組み立て → 決算後にリセット</text>
+      <g transform="translate(424,0)">
+        <rect width="176" height="88" rx="14" class="box-final"/>
+        <use href="#icon-report" x="18" y="24" width="40" height="40" class="icon-grey"/>
+        <text x="76" y="44" class="t step">決算書</text>
+        <text x="76" y="66" class="t step-sub">（個別FS）</text>
+      </g>
+    </g>
 
-  <rect x="70" y="382" width="240" height="90" rx="18" class="card"/>
-  <use href="#icon-gather" x="92" y="394" width="56" height="56"/>
-  <text class="t label" x="164" y="422">データ収集</text>
+    <!-- right column -->
+    <g transform="translate(648,112)">
+      <rect width="208" height="42" rx="21" fill="#f1f3f4" stroke="#dadce0" stroke-width="2"/>
+      <use href="#icon-diary" x="14" y="9" width="24" height="24" class="icon-grey"/>
+      <text x="46" y="27" class="t pill-text" fill="#3c4043">日記：毎日書く</text>
 
-  <line x1="320" y1="426" x2="360" y2="426" class="arrow"/>
-  <polygon points="376,426 360,416 360,436" fill="rgba(95,99,104,0.78)"/>
+      <rect y="50" width="208" height="24" rx="12" fill="#f8f9fa" stroke="#dadce0" stroke-width="1.8"/>
+      <use href="#icon-ledger" x="14" y="53" width="18" height="18" class="icon-grey"/>
+      <text x="40" y="69" class="t chip-text" fill="#3c4043">翌期も積み上げ</text>
+    </g>
 
-  <rect x="390" y="382" width="240" height="90" rx="18" class="card"/>
-  <use href="#icon-sigma" x="412" y="394" width="56" height="56"/>
-  <text class="t label" x="484" y="422">合算・調整</text>
+    <path d="M624 156 C 650 156 650 174 644 174" class="arrow arrow-grey-dash"/>
+  </g>
 
-  <line x1="640" y1="426" x2="680" y2="426" class="arrow"/>
-  <polygon points="696,426 680,416 680,436" fill="rgba(95,99,104,0.78)"/>
+  <!-- Consolidated card -->
+  <g transform="translate(40,304)">
+    <rect width="880" height="240" rx="18" class="card"/>
+    <rect width="880" height="240" rx="18" class="card-border"/>
+    <path d="M0,18 Q0,0 18,0 H862 Q880,0 880,18 V56 H0 Z" class="header-consolidated"/>
 
-  <rect x="710" y="382" width="140" height="90" rx="18" fill="#F1F6FF" stroke="#8AB4F8" stroke-width="2"/>
-  <use href="#icon-doc" x="728" y="394" width="56" height="56"/>
-  <text class="t label" x="780" y="422">決算書</text>
-  <text class="t sub" x="780" y="446">（連結FS）</text>
+    <text x="24" y="38" class="t title">連結会計 <tspan class="title-sub" fill="#d2e3fc">（組み立て＋リセット）</tspan></text>
+    <text x="24" y="84" class="t desc">期末に集めて → 合算・調整して → 連結FSを作る</text>
 
-  <!-- Reset loop (outside small boxes) -->
-  <use href="#icon-reset" x="852" y="388" width="44" height="44" opacity="0.9"/>
-  <path d="M850 466 C 904 446, 904 408, 850 392" fill="none" stroke="rgba(95,99,104,0.55)" stroke-width="4" stroke-linecap="round"/>
-  <polygon points="846,388 860,388 854,402" fill="rgba(95,99,104,0.55)"/>
-  <text class="t sub" x="842" y="474" text-anchor="end">決算後にリセット</text>
+    <line x1="636" y1="108" x2="636" y2="216" class="divider"/>
 
-  <rect x="710" y="484" width="140" height="36" rx="18" fill="rgba(26,115,232,0.08)" stroke="rgba(26,115,232,0.28)" stroke-width="2"/>
-  <use href="#icon-puzzle" x="724" y="489" width="28" height="28"/>
-  <text class="t pill" x="780" y="508" text-anchor="middle" fill="#185abc">パズル（毎回集める）</text>
+    <!-- flow (left column) -->
+    <g transform="translate(24,112)">
+      <rect width="176" height="88" rx="14" class="box-blue"/>
+      <use href="#icon-gather" x="18" y="24" width="40" height="40" class="icon-blue"/>
+      <text x="76" y="52" class="t step">データ収集</text>
+
+      <line x1="185" y1="44" x2="203" y2="44" class="arrow arrow-blue"/>
+
+      <g transform="translate(212,0)">
+        <rect width="176" height="88" rx="14" class="box-blue"/>
+        <use href="#icon-merge" x="18" y="24" width="40" height="40" class="icon-blue"/>
+        <text x="76" y="52" class="t step">合算・調整</text>
+      </g>
+
+      <line x1="397" y1="44" x2="415" y2="44" class="arrow arrow-blue"/>
+
+      <g transform="translate(424,0)">
+        <rect width="176" height="88" rx="14" class="box-final-blue"/>
+        <use href="#icon-report" x="18" y="24" width="40" height="40" class="icon-blue"/>
+        <text x="76" y="44" class="t step">決算書</text>
+        <text x="76" y="66" class="t step-sub" fill="#1a73e8">（連結FS）</text>
+      </g>
+    </g>
+
+    <!-- right column -->
+    <g transform="translate(648,112)">
+      <rect width="208" height="42" rx="21" fill="#e8f0fe" stroke="#a0c3ff" stroke-width="2"/>
+      <use href="#icon-puzzle" x="14" y="9" width="24" height="24" class="icon-blue"/>
+      <text x="46" y="27" class="t pill-text" fill="#1a73e8">パズル：毎回集める</text>
+
+      <rect y="50" width="208" height="24" rx="12" fill="#fce8e6" stroke="#f4c7c3" stroke-width="1.8"/>
+      <use href="#icon-no-ledger" x="14" y="53" width="18" height="18" class="icon-grey"/>
+      <text x="40" y="69" class="t chip-text" fill="#ea4335">※連結帳簿は存在しない</text>
+
+      <rect y="80" width="208" height="24" rx="12" fill="#f1f3f4" stroke="#dadce0" stroke-width="1.8"/>
+      <use href="#icon-reset" x="14" y="83" width="18" height="18" class="icon-grey"/>
+      <text x="40" y="99" class="t chip-text" fill="#3c4043">翌期リセット</text>
+    </g>
+
+    <path d="M624 156 C 660 156 660 204 644 204" class="arrow arrow-blue-dash"/>
+  </g>
 </svg>
