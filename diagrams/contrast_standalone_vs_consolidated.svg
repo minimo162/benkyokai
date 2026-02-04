@@ -3,41 +3,47 @@
     <style>
       .t { font-family: "Noto Sans JP","Hiragino Sans","Yu Gothic","Meiryo",sans-serif; }
 
-      /* type */
-      .title { font-weight: 900; font-size: 24px; fill: #ffffff; letter-spacing: 0.01em; }
-      .title-sub { font-weight: 600; font-size: 16px; }
-      .desc { font-weight: 800; font-size: 15px; fill: #3c4043; }
-      .col { font-weight: 900; font-size: 12px; fill: #5f6368; letter-spacing: 0.04em; }
-      .step { font-weight: 900; font-size: 18px; fill: #202124; }
-      .sub { font-weight: 700; font-size: 12px; fill: #5f6368; }
-      .caption-strong { font-weight: 900; font-size: 16px; fill: #202124; }
-      .caption-sub { font-weight: 800; font-size: 12px; fill: #5f6368; }
+      /* type - サイズ調整済み */
+      .title { font-weight: 900; font-size: 26px; fill: #ffffff; letter-spacing: 0.01em; }
+      .title-sub { font-weight: 600; font-size: 17px; }
+      .desc { font-weight: 800; font-size: 16px; fill: #3c4043; }
+      .col { font-weight: 900; font-size: 13px; fill: #5f6368; letter-spacing: 0.04em; }
+      .step { font-weight: 900; font-size: 20px; fill: #202124; }
+      .sub { font-weight: 700; font-size: 13px; fill: #5f6368; }
+      .caption-strong { font-weight: 900; font-size: 17px; fill: #202124; }
+      .caption-sub { font-weight: 800; font-size: 13px; fill: #5f6368; }
+
+      /* badge */
+      .badge-grey { fill: #e8eaed; }
+      .badge-blue { fill: #e8f0fe; }
+      .badge-text-grey { font-weight: 800; font-size: 13px; fill: #5f6368; }
+      .badge-text-blue { font-weight: 800; font-size: 13px; fill: #1a73e8; }
 
       /* card */
       .card { fill: #ffffff; filter: url(#shadow); }
-      .card-border { fill: none; stroke: #dadce0; stroke-width: 1.4; }
+      .card-border { fill: none; stroke: #dadce0; stroke-width: 1.6; }
       .header-standalone { fill: #5f6368; }
       .header-consolidated { fill: #1a73e8; }
 
       /* panel */
-      .panel { fill: #f8f9fa; stroke: #dadce0; stroke-width: 1.6; }
-      .divider { stroke: #e0e3e7; stroke-width: 2; }
+      .panel { fill: #f8f9fa; stroke: #dadce0; stroke-width: 1.8; }
+      .divider { stroke: #e0e3e7; stroke-width: 2.2; }
 
-      /* boxes */
-      .b { fill: #ffffff; stroke: #cfd3d7; stroke-width: 2; }
-      .b-final { fill: #f1f3f4; stroke: #c6cacf; stroke-width: 2; }
-      .b-blue { fill: #ffffff; stroke: #669df6; stroke-width: 2.2; }
-      .b-final-blue { fill: #e8f0fe; stroke: #669df6; stroke-width: 2.2; }
+      /* boxes - 角丸大きめ */
+      .b { fill: #ffffff; stroke: #bdc1c6; stroke-width: 2.4; }
+      .b-final { fill: #f1f3f4; stroke: #9aa0a6; stroke-width: 2.4; }
+      .b-blue { fill: #ffffff; stroke: #669df6; stroke-width: 2.6; }
+      .b-final-blue { fill: #e8f0fe; stroke: #4285f4; stroke-width: 2.6; }
 
-      /* arrows */
-      .a { stroke-width: 3.6; fill: none; stroke-linecap: round; }
+      /* arrows - 太め */
+      .a { stroke-width: 4.2; fill: none; stroke-linecap: round; }
       .a-grey { stroke: #9aa0a6; marker-end: url(#mGrey); }
       .a-blue { stroke: #669df6; marker-end: url(#mBlue); }
-      .a-blue-dash { stroke: #669df6; stroke-dasharray: 6 6; marker-end: url(#mBlue); }
+      .a-blue-dash { stroke: #669df6; stroke-dasharray: 8 6; marker-end: url(#mBlue); }
 
       /* chips */
-      .chip-red { fill: #fce8e6; stroke: #f4c7c3; stroke-width: 1.6; }
-      .chip-red-text { font-weight: 900; font-size: 12px; fill: #ea4335; }
+      .chip-red { fill: #fce8e6; stroke: #f4c7c3; stroke-width: 1.8; }
+      .chip-red-text { font-weight: 900; font-size: 13px; fill: #d93025; }
 
       /* icons */
       .icon-grey { fill: #5f6368; color: #5f6368; }
@@ -48,181 +54,204 @@
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#3c4043" flood-opacity="0.12"/>
     </filter>
 
-    <marker id="mGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto">
+    <marker id="mGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" fill="#9aa0a6"/>
     </marker>
-    <marker id="mBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto">
+    <marker id="mBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" fill="#669df6"/>
     </marker>
 
-    <!-- Diary with writing (日々仕訳) -->
-    <symbol id="icon-diary-writing" viewBox="0 0 24 24">
-      <rect x="5" y="4" width="15" height="16" rx="2.6" fill="currentColor" fill-opacity="0.10" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-      <line x1="8.7" y1="4" x2="8.7" y2="20" stroke="currentColor" stroke-width="1.8" opacity="0.75"/>
-      <line x1="11" y1="8.2" x2="18.2" y2="8.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.95"/>
-      <line x1="11" y1="11.7" x2="18.2" y2="11.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
-      <line x1="11" y1="15.2" x2="16.8" y2="15.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.75"/>
-      <path d="M14.2 18.2 L17.6 14.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
-      <path d="M17.0 14.2 L18.2 15.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+    <!-- 改善：ペン＋ノート（日々仕訳）- よりシンプル -->
+    <symbol id="icon-journal" viewBox="0 0 24 24">
+      <rect x="4" y="3" width="14" height="18" rx="2" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="7.5" y1="3" x2="7.5" y2="21" stroke="currentColor" stroke-width="2" opacity="0.7"/>
+      <line x1="10" y1="8" x2="16" y2="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="10" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="10" y1="16" x2="14" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M19 6 L21 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="21" cy="4" r="1" fill="currentColor"/>
     </symbol>
 
-    <!-- Stacked diaries (元帳) -->
-    <symbol id="icon-diary-stack" viewBox="0 0 24 24">
-      <g fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
-        <rect x="7" y="4" width="13" height="14" rx="2.3"/>
-        <rect x="5" y="6" width="13" height="14" rx="2.3"/>
-        <rect x="3" y="8" width="13" height="14" rx="2.3"/>
+    <!-- 改善：本棚風積層（元帳） -->
+    <symbol id="icon-ledger-stack" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="16" rx="2" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="2"/>
+      <rect x="5" y="6" width="4" height="12" rx="1" fill="currentColor" fill-opacity="0.25" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="10" y="6" width="4" height="12" rx="1" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="15" y="6" width="4" height="12" rx="1" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="7" y1="8" x2="7" y2="16" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+      <line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+      <line x1="17" y1="8" x2="17" y2="16" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+    </symbol>
+
+    <!-- 改善：複数書類→トレイ（データ収集）★新規 -->
+    <symbol id="icon-collect-docs" viewBox="0 0 24 24">
+      <!-- 3枚の書類（上から落ちてくる） -->
+      <g fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1.6">
+        <rect x="3" y="2" width="6" height="8" rx="1" transform="rotate(-8 6 6)"/>
+        <rect x="9" y="1" width="6" height="8" rx="1"/>
+        <rect x="15" y="2" width="6" height="8" rx="1" transform="rotate(8 18 6)"/>
       </g>
-      <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.7">
-        <line x1="10" y1="4" x2="10" y2="18"/>
-        <line x1="8" y1="6" x2="8" y2="20"/>
-        <line x1="6" y1="8" x2="6" y2="22"/>
+      <!-- 下向き矢印 -->
+      <path d="M12 10 L12 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M9 13 L12 16 L15 13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- トレイ（受け皿） -->
+      <path d="M4 18 L6 16 L18 16 L20 18 L20 21 L4 21 Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- 改善：3→1合流＋歯車（合算・調整）★新規 -->
+    <symbol id="icon-merge-adjust" viewBox="0 0 24 24">
+      <!-- 3本の入力線 -->
+      <path d="M3 5 L10 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M3 12 L10 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M3 19 L10 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <!-- 合流点 -->
+      <circle cx="11" cy="12" r="2.5" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="1.8"/>
+      <!-- 出力線 -->
+      <path d="M13.5 12 L18 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M16 9.5 L18.5 12 L16 14.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- 小さな歯車（調整を示す） -->
+      <circle cx="19" cy="6" r="3" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="19" cy="6" r="1.2" fill="currentColor"/>
+      <g stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+        <line x1="19" y1="2.5" x2="19" y2="3.5"/>
+        <line x1="19" y1="8.5" x2="19" y2="9.5"/>
+        <line x1="15.5" y1="6" x2="16.5" y2="6"/>
+        <line x1="21.5" y1="6" x2="22.5" y2="6"/>
       </g>
     </symbol>
 
-    <!-- Puzzle pieces scattered (データ収集) -->
-    <symbol id="icon-puzzle-scatter" viewBox="0 0 24 24">
-      <g fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
-        <g transform="rotate(-14 7.2 10.2)" opacity="1">
-          <rect x="3" y="6" width="7.6" height="7.6" rx="1.8"/>
-          <circle cx="10.6" cy="9.8" r="1.9"/>
-          <circle cx="6.8" cy="13.6" r="1.9"/>
-        </g>
-        <g transform="rotate(11 16.5 8.0)" opacity="0.9">
-          <rect x="13" y="4" width="7.6" height="7.6" rx="1.8"/>
-          <circle cx="13.0" cy="7.8" r="1.9"/>
-          <circle cx="16.8" cy="11.6" r="1.9"/>
-        </g>
-        <g transform="rotate(-6 13.0 17.0)" opacity="0.82">
-          <rect x="9" y="13" width="7.6" height="7.6" rx="1.8"/>
-          <circle cx="16.6" cy="16.8" r="1.9"/>
-          <circle cx="12.8" cy="13.0" r="1.9"/>
-        </g>
-      </g>
-    </symbol>
-
-    <!-- Puzzle fitted (合算・調整) -->
-    <symbol id="icon-puzzle-fit" viewBox="0 0 24 24">
-      <rect x="4" y="4" width="16" height="16" rx="3" fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-      <line x1="12" y1="5.5" x2="12" y2="18.5" stroke="currentColor" stroke-width="1.6" opacity="0.75" stroke-linecap="round"/>
-      <line x1="5.5" y1="12" x2="18.5" y2="12" stroke="currentColor" stroke-width="1.6" opacity="0.75" stroke-linecap="round"/>
-      <circle cx="12" cy="8.5" r="2.0" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.6"/>
-      <circle cx="8.5" cy="12" r="2.0" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.6"/>
-      <circle cx="16.0" cy="12" r="2.0" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.6"/>
-      <path d="M19.2 6.5 L21.0 4.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
-      <path d="M21.0 6.5 L19.2 4.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
-    </symbol>
-
-    <!-- Report -->
+    <!-- Report（そのまま） -->
     <symbol id="icon-report" viewBox="0 0 24 24">
-      <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="currentColor"/>
+      <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="currentColor"/>
     </symbol>
 
   </defs>
 
-  <!-- Standalone -->
+  <!-- ========== 単体会計 ========== -->
   <g transform="translate(40,28)">
-    <rect width="880" height="300" rx="18" class="card"/>
-    <rect width="880" height="300" rx="18" class="card-border"/>
+    <rect width="880" height="290" rx="18" class="card"/>
+    <rect width="880" height="290" rx="18" class="card-border"/>
     <path d="M0,18 Q0,0 18,0 H862 Q880,0 880,18 V62 H0 Z" class="header-standalone"/>
-    <text x="24" y="40" class="t title">単体会計 <tspan class="title-sub" fill="#e8eaed">（積み上げ）</tspan></text>
 
-    <text x="24" y="92" class="t desc">日々仕訳 → 元帳 → 個別FS</text>
+    <!-- タイトル＋比喩バッジ -->
+    <text x="24" y="42" class="t title">単体会計</text>
+    <rect x="145" y="22" width="90" height="28" rx="14" class="badge-grey"/>
+    <text x="190" y="42" class="t badge-text-grey" text-anchor="middle">📓 日記式</text>
+    <text x="250" y="42" class="t title-sub" fill="#e8eaed">積み上げ型</text>
 
-    <g transform="translate(24,112)">
-      <rect width="832" height="182" rx="16" class="panel"/>
+    <text x="24" y="88" class="t desc">日々仕訳 → 元帳に蓄積 → 個別FS</text>
 
-      <text x="142" y="22" class="t col" text-anchor="middle">入力</text>
-      <text x="416" y="22" class="t col" text-anchor="middle">処理</text>
-      <text x="690" y="22" class="t col" text-anchor="middle">出力</text>
+    <g transform="translate(24,106)">
+      <rect width="832" height="176" rx="16" class="panel"/>
 
-      <g transform="translate(32,34)">
-        <rect width="220" height="80" rx="14" class="b"/>
-        <use href="#icon-diary-writing" x="16" y="20" width="40" height="40" class="icon-grey"/>
-        <text x="68" y="52" class="t step">日々仕訳</text>
-        <text x="68" y="70" class="t sub">（日記）</text>
+      <text x="142" y="24" class="t col" text-anchor="middle">入力</text>
+      <text x="416" y="24" class="t col" text-anchor="middle">処理</text>
+      <text x="690" y="24" class="t col" text-anchor="middle">出力</text>
+
+      <!-- 日々仕訳 -->
+      <g transform="translate(32,36)">
+        <rect width="220" height="76" rx="14" class="b"/>
+        <use href="#icon-journal" x="14" y="16" width="44" height="44" class="icon-grey"/>
+        <text x="70" y="42" class="t step">日々仕訳</text>
+        <text x="70" y="62" class="t sub">毎日コツコツ記録</text>
       </g>
 
-      <g transform="translate(306,34)">
-        <rect width="220" height="80" rx="14" class="b"/>
-        <use href="#icon-diary-stack" x="16" y="20" width="40" height="40" class="icon-grey"/>
-        <text x="68" y="52" class="t step">元帳</text>
-        <text x="68" y="70" class="t sub">（積み重なる）</text>
+      <!-- 元帳 -->
+      <g transform="translate(306,36)">
+        <rect width="220" height="76" rx="14" class="b"/>
+        <use href="#icon-ledger-stack" x="14" y="16" width="44" height="44" class="icon-grey"/>
+        <text x="70" y="42" class="t step">元帳</text>
+        <text x="70" y="62" class="t sub">どんどん積み重なる</text>
       </g>
 
-      <g transform="translate(580,34)">
-        <rect width="220" height="80" rx="14" class="b-final"/>
-        <use href="#icon-report" x="16" y="20" width="40" height="40" class="icon-grey"/>
-        <text x="68" y="48" class="t step">決算書</text>
-        <text x="68" y="70" class="t sub">（個別FS）</text>
+      <!-- 決算書 -->
+      <g transform="translate(580,36)">
+        <rect width="220" height="76" rx="14" class="b-final"/>
+        <use href="#icon-report" x="14" y="16" width="44" height="44" class="icon-grey"/>
+        <text x="70" y="42" class="t step">決算書</text>
+        <text x="70" y="62" class="t sub">個別FS</text>
       </g>
 
-      <line x1="262" y1="74" x2="292" y2="74" class="a a-grey"/>
-      <text x="277" y="60" class="t sub" text-anchor="middle">日々</text>
+      <!-- 矢印 -->
+      <line x1="262" y1="74" x2="294" y2="74" class="a a-grey"/>
+      <text x="278" y="58" class="t sub" text-anchor="middle">日々</text>
 
-      <line x1="536" y1="74" x2="566" y2="74" class="a a-grey"/>
-      <text x="551" y="60" class="t sub" text-anchor="middle">決算</text>
+      <line x1="536" y1="74" x2="568" y2="74" class="a a-grey"/>
+      <text x="552" y="58" class="t sub" text-anchor="middle">決算</text>
 
-      <line x1="24" y1="132" x2="808" y2="132" class="divider"/>
-      <text x="416" y="156" class="t caption-strong" text-anchor="middle">元帳が残る</text>
-      <text x="416" y="173" class="t caption-sub" text-anchor="middle">＝翌期も積み上げ（継続）</text>
+      <!-- キャプション -->
+      <line x1="24" y1="128" x2="808" y2="128" class="divider"/>
+      <text x="416" y="152" class="t caption-strong" text-anchor="middle">📚 元帳が残る ＝ 翌期も積み上げ</text>
+      <text x="416" y="170" class="t caption-sub" text-anchor="middle">（継続して記録が蓄積される）</text>
     </g>
   </g>
 
-  <!-- Consolidated -->
-  <g transform="translate(40,372)">
-    <rect width="880" height="300" rx="18" class="card"/>
-    <rect width="880" height="300" rx="18" class="card-border"/>
+  <!-- ========== 連結会計 ========== -->
+  <g transform="translate(40,366)">
+    <rect width="880" height="306" rx="18" class="card"/>
+    <rect width="880" height="306" rx="18" class="card-border"/>
     <path d="M0,18 Q0,0 18,0 H862 Q880,0 880,18 V62 H0 Z" class="header-consolidated"/>
-    <text x="24" y="40" class="t title">連結会計 <tspan class="title-sub" fill="#d2e3fc">（組み立て＋リセット）</tspan></text>
 
-    <text x="24" y="92" class="t desc">期末に収集 → 合算・調整 → 連結FS</text>
+    <!-- タイトル＋比喩バッジ -->
+    <text x="24" y="42" class="t title">連結会計</text>
+    <rect x="145" y="22" width="100" height="28" rx="14" class="badge-blue"/>
+    <text x="195" y="42" class="t badge-text-blue" text-anchor="middle">🧩 パズル式</text>
+    <text x="260" y="42" class="t title-sub" fill="#d2e3fc">組立＋リセット型</text>
 
-    <g transform="translate(24,112)">
-      <rect width="832" height="182" rx="16" class="panel"/>
+    <text x="24" y="88" class="t desc">期末に収集 → 合算・調整 → 連結FS</text>
 
-      <g transform="translate(602,10)">
-        <rect width="220" height="26" rx="13" class="chip-red"/>
-        <text x="110" y="18" class="t chip-red-text" text-anchor="middle">※ 連結帳簿は存在しない</text>
+    <g transform="translate(24,106)">
+      <rect width="832" height="192" rx="16" class="panel"/>
+
+      <!-- 注記チップ -->
+      <g transform="translate(590,8)">
+        <rect width="232" height="28" rx="14" class="chip-red"/>
+        <text x="116" y="19" class="t chip-red-text" text-anchor="middle">⚠ 連結帳簿は存在しない</text>
       </g>
 
-      <text x="142" y="22" class="t col" text-anchor="middle">入力</text>
-      <text x="416" y="22" class="t col" text-anchor="middle">処理</text>
-      <text x="690" y="22" class="t col" text-anchor="middle">出力</text>
+      <text x="142" y="24" class="t col" text-anchor="middle">入力</text>
+      <text x="416" y="24" class="t col" text-anchor="middle">処理</text>
+      <text x="690" y="24" class="t col" text-anchor="middle">出力</text>
 
-      <g transform="translate(32,34)">
-        <rect width="220" height="80" rx="14" class="b-blue"/>
-        <use href="#icon-puzzle-scatter" x="16" y="20" width="40" height="40" class="icon-blue"/>
-        <text x="68" y="52" class="t step">データ収集</text>
-        <text x="68" y="70" class="t sub">（ピースを集める）</text>
+      <!-- データ収集 ★改善アイコン -->
+      <g transform="translate(32,38)">
+        <rect width="220" height="76" rx="14" class="b-blue"/>
+        <use href="#icon-collect-docs" x="14" y="16" width="44" height="44" class="icon-blue"/>
+        <text x="70" y="42" class="t step">データ収集</text>
+        <text x="70" y="62" class="t sub" fill="#1a73e8">各社から集める</text>
       </g>
 
-      <g transform="translate(306,34)">
-        <rect width="220" height="80" rx="14" class="b-blue"/>
-        <use href="#icon-puzzle-fit" x="16" y="20" width="40" height="40" class="icon-blue"/>
-        <text x="68" y="52" class="t step">合算・調整</text>
-        <text x="68" y="70" class="t sub">（かっちり組立）</text>
+      <!-- 合算・調整 ★改善アイコン -->
+      <g transform="translate(306,38)">
+        <rect width="220" height="76" rx="14" class="b-blue"/>
+        <use href="#icon-merge-adjust" x="14" y="16" width="44" height="44" class="icon-blue"/>
+        <text x="70" y="42" class="t step">合算・調整</text>
+        <text x="70" y="62" class="t sub" fill="#1a73e8">まとめて整える</text>
       </g>
 
-      <g transform="translate(580,34)">
-        <rect width="220" height="80" rx="14" class="b-final-blue"/>
-        <use href="#icon-report" x="16" y="20" width="40" height="40" class="icon-blue"/>
-        <text x="68" y="48" class="t step">決算書</text>
-        <text x="68" y="70" class="t sub" fill="#1a73e8">（連結FS）</text>
+      <!-- 決算書 -->
+      <g transform="translate(580,38)">
+        <rect width="220" height="76" rx="14" class="b-final-blue"/>
+        <use href="#icon-report" x="14" y="16" width="44" height="44" class="icon-blue"/>
+        <text x="70" y="42" class="t step">決算書</text>
+        <text x="70" y="62" class="t sub" fill="#1a73e8">連結FS</text>
       </g>
 
-      <line x1="262" y1="74" x2="292" y2="74" class="a a-blue"/>
-      <text x="277" y="60" class="t sub" text-anchor="middle" fill="#1a73e8">期末</text>
+      <!-- 矢印 -->
+      <line x1="262" y1="76" x2="294" y2="76" class="a a-blue"/>
+      <text x="278" y="60" class="t sub" text-anchor="middle" fill="#1a73e8">期末</text>
 
-      <line x1="536" y1="74" x2="566" y2="74" class="a a-blue"/>
-      <text x="551" y="60" class="t sub" text-anchor="middle" fill="#1a73e8">決算</text>
+      <line x1="536" y1="76" x2="568" y2="76" class="a a-blue"/>
+      <text x="552" y="60" class="t sub" text-anchor="middle" fill="#1a73e8">決算</text>
 
-      <!-- reset loop -->
-      <path d="M690 114 V124 H142 V114" class="a a-blue-dash"/>
+      <!-- リセットループ（点線） -->
+      <path d="M690 114 V130 H142 V114" class="a a-blue-dash"/>
+      <text x="416" y="142" class="t sub" text-anchor="middle" fill="#669df6">🔄 リセット</text>
 
-      <line x1="24" y1="132" x2="808" y2="132" class="divider"/>
-      <text x="416" y="156" class="t caption-strong" text-anchor="middle">毎期つくり直し</text>
-      <text x="416" y="173" class="t caption-sub" text-anchor="middle">＝決算後に解散（翌期は開始仕訳から）</text>
+      <!-- キャプション -->
+      <line x1="24" y1="152" x2="808" y2="152" class="divider"/>
+      <text x="416" y="174" class="t caption-strong" text-anchor="middle">🔁 毎期つくり直し ＝ 決算後に解散</text>
+      <text x="416" y="192" class="t caption-sub" text-anchor="middle">（翌期は開始仕訳からスタート）</text>
     </g>
   </g>
 </svg>
