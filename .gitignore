@@ -208,3 +208,5 @@ __marimo__/
 
 # marp render artifacts
 _render_check.*
+_marp_preview.*
+_marp_images*
