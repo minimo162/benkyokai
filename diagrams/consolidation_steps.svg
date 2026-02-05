@@ -63,13 +63,13 @@
   </defs>
 
   <!-- Inputs -->
-  <rect x="100" y="44" width="270" height="112" rx="18" fill="#DDEBFF" stroke="#8AB4F8" stroke-width="2" filter="url(#softShadow)"/>
+  <rect x="100" y="44" width="270" height="112" rx="18" fill="#DDEBFF" stroke="none" filter="url(#softShadow)"/>
   <text class="t h" x="126" y="88">親会社</text>
   <text class="t s" x="126" y="122">個別財務諸表</text>
   <use href="#icon-building" x="292" y="62" width="72" height="72"/>
   <use href="#icon-doc" x="230" y="68" width="64" height="64" opacity="0.9"/>
 
-  <rect x="550" y="44" width="270" height="112" rx="18" fill="#DFF2E6" stroke="#86C39A" stroke-width="2" filter="url(#softShadow)"/>
+  <rect x="550" y="44" width="270" height="112" rx="18" fill="#DFF2E6" stroke="none" filter="url(#softShadow)"/>
   <text class="t h" x="576" y="88">子会社</text>
   <text class="t s" x="576" y="122">個別財務諸表</text>
   <use href="#icon-building" x="742" y="62" width="72" height="72"/>
@@ -82,7 +82,7 @@
   <polygon points="460,202 446,186 474,186" fill="#5f6368"/>
 
   <!-- STEP 1 -->
-  <rect x="160" y="212" width="600" height="86" rx="20" fill="#ffffff" stroke="rgba(60,64,67,0.18)" stroke-width="2" filter="url(#softShadow)"/>
+  <rect x="160" y="212" width="600" height="86" rx="20" fill="#ffffff" stroke="none" filter="url(#softShadow)"/>
   <rect x="160" y="212" width="14" height="86" rx="7" fill="#1A73E8"/>
   <text class="t k" x="190" y="248" fill="#1A73E8">STEP1</text>
   <text class="t b" x="280" y="248">合算</text>
@@ -93,7 +93,7 @@
   <polygon points="460,340 446,324 474,324" fill="#5f6368"/>
 
   <!-- STEP 2 -->
-  <rect x="160" y="350" width="600" height="98" rx="20" fill="#ffffff" stroke="rgba(60,64,67,0.18)" stroke-width="2" filter="url(#softShadow)"/>
+  <rect x="160" y="350" width="600" height="98" rx="20" fill="#ffffff" stroke="none" filter="url(#softShadow)"/>
   <rect x="160" y="350" width="14" height="98" rx="7" fill="#EA4335"/>
   <text class="t k" x="190" y="390" fill="#EA4335">STEP2</text>
   <text class="t b" x="280" y="390">連結消去・修正</text>
@@ -104,7 +104,7 @@
   <polygon points="460,492 446,476 474,476" fill="#5f6368"/>
 
   <!-- STEP 3 -->
-  <rect x="160" y="502" width="600" height="86" rx="20" fill="#ffffff" stroke="rgba(60,64,67,0.18)" stroke-width="2" filter="url(#softShadow)"/>
+  <rect x="160" y="502" width="600" height="86" rx="20" fill="#ffffff" stroke="none" filter="url(#softShadow)"/>
   <rect x="160" y="502" width="14" height="86" rx="7" fill="#5F6368"/>
   <text class="t k" x="190" y="538" fill="#5F6368">STEP3</text>
   <text class="t b" x="280" y="538">組替</text>
@@ -114,7 +114,7 @@
   <!-- Output -->
   <line x1="460" y1="600" x2="460" y2="612" stroke="#5f6368" stroke-width="6" stroke-linecap="round"/>
   <polygon points="460,628 446,612 474,612" fill="#5f6368"/>
-  <rect x="160" y="632" width="600" height="84" rx="20" fill="#F1F6FF" stroke="#8AB4F8" stroke-width="2" filter="url(#softShadow)"/>
+  <rect x="160" y="632" width="600" height="84" rx="20" fill="#F1F6FF" stroke="none" filter="url(#softShadow)"/>
   <text class="t h" x="460" y="682" text-anchor="middle" fill="#1A73E8">連結財務諸表</text>
   <use href="#icon-doc" x="680" y="642" width="64" height="64" opacity="0.95"/>
 </svg>

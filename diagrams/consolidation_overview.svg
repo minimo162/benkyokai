@@ -48,7 +48,7 @@
   <text class="t label fill-white" x="92" y="78" text-anchor="start">企業グループ</text>
 
   <!-- Parent company card -->
-  <rect x="120" y="128" width="280" height="220" rx="18" fill="#DDEBFF" stroke="#8AB4F8" stroke-width="2" filter="url(#softShadow)"/>
+  <rect x="120" y="128" width="280" height="220" rx="18" fill="#DDEBFF" stroke="none" filter="url(#softShadow)"/>
   <text class="t title" x="146" y="172">親会社</text>
   <use href="#icon-building" x="304" y="116" width="84" height="84"/>
   <circle cx="150" cy="212" r="5.2" fill="#1A73E8"/><text class="t list" x="173" y="220">売上</text>
@@ -57,7 +57,7 @@
   <circle cx="150" cy="338" r="5.2" fill="#1A73E8"/><text class="t list" x="173" y="346">…</text>
 
   <!-- Child company card -->
-  <rect x="520" y="128" width="280" height="220" rx="18" fill="#DFF2E6" stroke="#86C39A" stroke-width="2" filter="url(#softShadow)"/>
+  <rect x="520" y="128" width="280" height="220" rx="18" fill="#DFF2E6" stroke="none" filter="url(#softShadow)"/>
   <text class="t title" x="546" y="172">子会社</text>
   <use href="#icon-building" x="704" y="116" width="84" height="84"/>
   <circle cx="550" cy="212" r="5.2" fill="#1A73E8"/><text class="t list" x="573" y="220">仕入</text>
@@ -78,7 +78,7 @@
   <polygon points="460,506 448,490 472,490" fill="#5F6368"/>
 
   <!-- Third party box -->
-  <rect x="250" y="516" width="420" height="120" rx="18" fill="#EFEFEF" stroke="#C7C7C7" stroke-width="2" filter="url(#softShadow)"/>
+  <rect x="250" y="516" width="420" height="120" rx="18" fill="#EFEFEF" stroke="none" filter="url(#softShadow)"/>
   <text class="t title" x="284" y="568">第三者</text>
   <text class="t small" x="284" y="604">（グループ外）</text>
   <use href="#icon-building" x="562" y="514" width="92" height="92"/>
