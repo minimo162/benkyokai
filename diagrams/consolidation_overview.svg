@@ -2,48 +2,55 @@
   <defs>
     <style>
       .t { font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif; }
-      .box-parent { fill: #DDEBFF; }
-      .box-child { fill: #DFF2E6; }
-      .box-third { fill: #F1F3F4; }
+      .box-parent { fill: #ffffff; stroke: #dadce0; stroke-width: 2.5; }
+      .box-child { fill: #ffffff; stroke: #dadce0; stroke-width: 2.5; }
+      .box-third { fill: #ffffff; stroke: #dadce0; stroke-width: 2.5; }
+      .group-frame { fill: #f8f9fa; }
       .pill { fill: rgba(255,255,255,0.65); }
       .title { font-weight: 900; font-size: 40px; fill: #202124; }
       .item { font-weight: 700; font-size: 30px; fill: #5f6368; }
       .label { font-weight: 800; font-size: 28px; fill: #5f6368; }
+      .group-label { font-weight: 800; font-size: 24px; fill: #5f6368; }
       .thirdTitle { font-weight: 900; font-size: 44px; fill: #202124; }
       .thirdSub { font-weight: 900; font-size: 30px; fill: #202124; }
       .arrowFill { fill: #5f6368; }
-      .arrowStroke { stroke: #5f6368; stroke-width: 8; stroke-linecap: round; }
+      .arrowStroke { stroke: #5f6368; stroke-width: 6; stroke-linecap: round; }
       .arrowHead { fill: #5f6368; }
       .xMark { font-weight: 900; font-size: 84px; fill: #202124; paint-order: stroke; stroke: #ffffff; stroke-width: 12; }
     </style>
 
     <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#202124" flood-opacity="0.12"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#202124" flood-opacity="0.09"/>
     </filter>
   </defs>
 
   <rect x="0" y="0" width="920" height="660" fill="#ffffff"/>
 
+  <!-- Corporate group -->
+  <rect class="group-frame" x="100" y="60" width="720" height="360" rx="36" stroke="none"/>
+  <rect class="pill" x="370" y="65" width="180" height="30" rx="15" stroke="none"/>
+  <text class="t group-label" x="460" y="80" text-anchor="middle" dominant-baseline="middle">企業グループ</text>
+
   <!-- Parent company -->
-  <rect class="box-parent" x="140" y="90" width="260" height="300" rx="30" filter="url(#softShadow)"/>
-  <text class="t title" x="270" y="153" text-anchor="middle" dominant-baseline="middle">親会社</text>
-  <text class="t item" x="190" y="245">・売上</text>
-  <text class="t item" x="190" y="300">・貸付</text>
-  <text class="t item" x="190" y="355">・配当</text>
+  <rect class="box-parent" x="120" y="90" width="260" height="300" rx="30" filter="url(#softShadow)"/>
+  <text class="t title" x="250" y="153" text-anchor="middle" dominant-baseline="middle">親会社</text>
+  <text class="t item" x="170" y="245">・売上</text>
+  <text class="t item" x="170" y="300">・貸付</text>
+  <text class="t item" x="170" y="355">・配当</text>
 
   <!-- Child company -->
-  <rect class="box-child" x="520" y="90" width="260" height="300" rx="30" filter="url(#softShadow)"/>
-  <text class="t title" x="650" y="153" text-anchor="middle" dominant-baseline="middle">子会社</text>
-  <text class="t item" x="570" y="245">・仕入</text>
-  <text class="t item" x="570" y="300">・借入</text>
-  <text class="t item" x="570" y="355">・配当支払</text>
+  <rect class="box-child" x="540" y="90" width="260" height="300" rx="30" filter="url(#softShadow)"/>
+  <text class="t title" x="670" y="153" text-anchor="middle" dominant-baseline="middle">子会社</text>
+  <text class="t item" x="590" y="245">・仕入</text>
+  <text class="t item" x="590" y="300">・借入</text>
+  <text class="t item" x="590" y="355">・配当支払</text>
 
   <!-- Internal transaction -->
   <text class="t label" x="460" y="195" text-anchor="middle">内部取引</text>
   <!-- Double arrow (thin) -->
-  <polygon class="arrowHead" points="400,275 414,263 414,287"/>
-  <line class="arrowStroke" x1="414" y1="275" x2="506" y2="275"/>
-  <polygon class="arrowHead" points="520,275 506,263 506,287"/>
+  <polygon class="arrowHead" points="380,275 394,263 394,287"/>
+  <line class="arrowStroke" x1="394" y1="275" x2="526" y2="275"/>
+  <polygon class="arrowHead" points="540,275 526,263 526,287"/>
   <text class="t xMark" x="460" y="275" text-anchor="middle" dominant-baseline="middle">×</text>
 
   <!-- External transaction -->
