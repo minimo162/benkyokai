@@ -18,7 +18,8 @@
   <g transform="translate(36 0)">
   <!-- Group container -->
   <rect x="60" y="38" width="800" height="340" rx="18" fill="#F1F6FF" stroke="none"/>
-  <text class="t label" x="92" y="82" text-anchor="start" fill="#1A73E8">企業グループ</text>
+  <path d="M60 56 Q60 38 78 38 H842 Q860 38 860 56 V100 H60 Z" fill="#1A73E8"/>
+  <text class="t label fill-white" x="92" y="82" text-anchor="start">企業グループ</text>
 
   <!-- Parent company card -->
   <rect x="120" y="128" width="280" height="220" rx="16" fill="#DDEBFF" stroke="none" filter="url(#softShadow)"/>
