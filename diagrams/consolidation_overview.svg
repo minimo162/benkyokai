@@ -6,21 +6,10 @@
       .label { font-weight: 900; font-size: 26px; }
       .small { font-weight: 800; font-size: 22px; fill: #5f6368; }
       .list { font-weight: 700; font-size: 22px; fill: #202124; }
-      .icon-stroke { stroke: #5f6368; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .red { fill: #ea4335; }
+      .gray { fill: #5f6368; }
       .fill-white { fill: #ffffff; }
     </style>
-    <symbol id="icon-building" viewBox="0 0 64 64">
-      <rect x="18" y="10" width="30" height="46" rx="6" fill="#ffffff" class="icon-stroke"/>
-      <g fill="#DADCE0">
-        <rect x="24" y="22" width="6" height="6" rx="1.5"/>
-        <rect x="34" y="22" width="6" height="6" rx="1.5"/>
-        <rect x="24" y="32" width="6" height="6" rx="1.5"/>
-        <rect x="34" y="32" width="6" height="6" rx="1.5"/>
-        <rect x="24" y="42" width="6" height="6" rx="1.5"/>
-        <rect x="34" y="42" width="6" height="6" rx="1.5"/>
-      </g>
-      <rect x="30" y="50" width="6" height="6" rx="1.5" fill="#DADCE0"/>
-    </symbol>
   </defs>
 
   <g transform="translate(36 0)">
@@ -32,36 +21,30 @@
   <!-- Parent company card -->
   <rect x="120" y="128" width="280" height="220" rx="16" fill="#ffffff" stroke="#DADCE0" stroke-width="3"/>
   <text class="t title" x="146" y="172">親会社</text>
-  <use href="#icon-building" x="304" y="116" width="84" height="84"/>
-  <circle cx="150" cy="212" r="5.2" fill="#1A73E8"/><text class="t list" x="173" y="220">売上</text>
-  <circle cx="150" cy="254" r="5.2" fill="#1A73E8"/><text class="t list" x="173" y="262">貸付</text>
-  <circle cx="150" cy="296" r="5.2" fill="#1A73E8"/><text class="t list" x="173" y="304">配当</text>
-  <circle cx="150" cy="338" r="5.2" fill="#1A73E8"/><text class="t list" x="173" y="346">…</text>
+  <text class="t list" x="150" y="220">・売上</text>
+  <text class="t list" x="150" y="262">・貸付</text>
+  <text class="t list" x="150" y="304">・配当</text>
+  <text class="t list" x="150" y="346">・…</text>
 
   <!-- Child company card -->
   <rect x="520" y="128" width="280" height="220" rx="16" fill="#ffffff" stroke="#DADCE0" stroke-width="3"/>
   <text class="t title" x="546" y="172">子会社</text>
-  <use href="#icon-building" x="704" y="116" width="84" height="84"/>
-  <circle cx="550" cy="212" r="5.2" fill="#1A73E8"/><text class="t list" x="573" y="220">仕入</text>
-  <circle cx="550" cy="254" r="5.2" fill="#1A73E8"/><text class="t list" x="573" y="262">借入</text>
-  <circle cx="550" cy="296" r="5.2" fill="#1A73E8"/><text class="t list" x="573" y="304">配当支払</text>
-  <circle cx="550" cy="338" r="5.2" fill="#1A73E8"/><text class="t list" x="573" y="346">…</text>
+  <text class="t list" x="550" y="220">・仕入</text>
+  <text class="t list" x="550" y="262">・借入</text>
+  <text class="t list" x="550" y="304">・配当支払</text>
+  <text class="t list" x="550" y="346">・…</text>
 
   <!-- Internal transaction (double arrow) -->
-  <text class="t small" x="460" y="210" text-anchor="middle" fill="#EA4335">内部取引</text>
-  <line x1="430" y1="268" x2="490" y2="268" stroke="#EA4335" stroke-width="5" stroke-linecap="round"/>
-  <polygon points="430,268 446,258 446,278" fill="#EA4335"/>
-  <polygon points="490,268 474,258 474,278" fill="#EA4335"/>
+  <text class="t small red" x="460" y="210" text-anchor="middle">内部取引</text>
+  <text class="t red" x="460" y="288" text-anchor="middle" font-size="46" font-weight="900">⇔</text>
 
   <!-- External transaction (down arrow) -->
   <text class="t small" x="510" y="446" text-anchor="start">外部取引</text>
-  <line x1="460" y1="420" x2="460" y2="494" stroke="#5F6368" stroke-width="6" stroke-linecap="round"/>
-  <polygon points="460,506 448,490 472,490" fill="#5F6368"/>
+  <text class="t gray" x="460" y="492" text-anchor="middle" font-size="56" font-weight="900">↓</text>
 
   <!-- Third party box -->
   <rect x="250" y="516" width="420" height="120" rx="16" fill="#ffffff" stroke="#DADCE0" stroke-width="3"/>
   <text class="t title" x="284" y="568">第三者</text>
   <text class="t small" x="284" y="604">（グループ外）</text>
-  <use href="#icon-building" x="562" y="514" width="92" height="92"/>
   </g>
 </svg>
