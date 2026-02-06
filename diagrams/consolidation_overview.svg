@@ -2,21 +2,25 @@
   <defs>
     <style>
       .t { font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif; }
-      .box-parent { fill: #ffffff; stroke: #dadce0; stroke-width: 2.5; }
-      .box-child { fill: #ffffff; stroke: #dadce0; stroke-width: 2.5; }
-      .box-third { fill: #ffffff; stroke: #dadce0; stroke-width: 2.5; }
-      .group-frame { fill: #f8f9fa; }
+      .box-parent { fill: #ffffff; stroke: #1a73e8; stroke-width: 2.5; }
+      .box-child { fill: #ffffff; stroke: #9aa0a6; stroke-width: 2.5; }
+      .box-third { fill: #ffffff; stroke: #9aa0a6; stroke-width: 2.5; }
+      .group-frame { fill: #f1f3f4; }
       .pill { fill: rgba(255,255,255,0.65); }
-      .title { font-weight: 900; font-size: 40px; fill: #202124; }
+      .title { font-weight: 900; font-size: 40px; fill: #3c4043; }
+      .title-parent { fill: #1a73e8; }
+      .title-child { fill: #5f6368; }
       .item { font-weight: 700; font-size: 30px; fill: #5f6368; }
       .label { font-weight: 800; font-size: 28px; fill: #5f6368; }
+      .label-internal { fill: #1a73e8; }
       .group-label { font-weight: 800; font-size: 24px; fill: #5f6368; }
-      .thirdTitle { font-weight: 900; font-size: 44px; fill: #202124; }
-      .thirdSub { font-weight: 900; font-size: 30px; fill: #202124; }
-      .arrowFill { fill: #5f6368; }
-      .arrowStroke { stroke: #5f6368; stroke-width: 6; stroke-linecap: round; }
-      .arrowHead { fill: #5f6368; }
-      .xMark { font-weight: 900; font-size: 84px; fill: #202124; paint-order: stroke; stroke: #ffffff; stroke-width: 12; }
+      .thirdTitle { font-weight: 900; font-size: 40px; fill: #3c4043; }
+      .thirdSub { font-weight: 900; font-size: 26px; fill: #5f6368; }
+      .arrowStrokeInternal { stroke: #1a73e8; stroke-width: 6; stroke-linecap: round; }
+      .arrowHeadInternal { fill: #1a73e8; }
+      .arrowStrokeExternal { stroke: #5f6368; stroke-width: 6; stroke-linecap: round; }
+      .arrowHeadExternal { fill: #5f6368; }
+      .xMark { font-weight: 900; font-size: 84px; fill: #1a73e8; paint-order: stroke; stroke: #ffffff; stroke-width: 12; }
     </style>
 
     <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
@@ -33,32 +37,32 @@
 
   <!-- Parent company -->
   <rect class="box-parent" x="120" y="90" width="260" height="300" rx="30" filter="url(#softShadow)"/>
-  <text class="t title" x="250" y="153" text-anchor="middle" dominant-baseline="middle">親会社</text>
+  <text class="t title title-parent" x="250" y="153" text-anchor="middle" dominant-baseline="middle">親会社</text>
   <text class="t item" x="170" y="245">・売上</text>
   <text class="t item" x="170" y="300">・貸付</text>
   <text class="t item" x="170" y="355">・配当</text>
 
   <!-- Child company -->
   <rect class="box-child" x="540" y="90" width="260" height="300" rx="30" filter="url(#softShadow)"/>
-  <text class="t title" x="670" y="153" text-anchor="middle" dominant-baseline="middle">子会社</text>
+  <text class="t title title-child" x="670" y="153" text-anchor="middle" dominant-baseline="middle">子会社</text>
   <text class="t item" x="590" y="245">・仕入</text>
   <text class="t item" x="590" y="300">・借入</text>
   <text class="t item" x="590" y="355">・配当支払</text>
 
   <!-- Internal transaction -->
-  <text class="t label" x="460" y="195" text-anchor="middle">内部取引</text>
+  <text class="t label label-internal" x="460" y="195" text-anchor="middle">内部取引</text>
   <!-- Double arrow (thin) -->
-  <polygon class="arrowHead" points="380,275 394,263 394,287"/>
-  <line class="arrowStroke" x1="394" y1="275" x2="526" y2="275"/>
-  <polygon class="arrowHead" points="540,275 526,263 526,287"/>
+  <polygon class="arrowHeadInternal" points="380,275 394,263 394,287"/>
+  <line class="arrowStrokeInternal" x1="394" y1="275" x2="526" y2="275"/>
+  <polygon class="arrowHeadInternal" points="540,275 526,263 526,287"/>
   <text class="t xMark" x="460" y="275" text-anchor="middle" dominant-baseline="middle">×</text>
 
   <!-- External transaction -->
   <text class="t label" x="460" y="430" text-anchor="middle">外部取引</text>
   <!-- Double vertical arrow (thin) -->
-  <polygon class="arrowHead" points="460,458 448,472 472,472"/>
-  <line class="arrowStroke" x1="460" y1="472" x2="460" y2="498"/>
-  <polygon class="arrowHead" points="460,512 448,498 472,498"/>
+  <polygon class="arrowHeadExternal" points="460,458 448,472 472,472"/>
+  <line class="arrowStrokeExternal" x1="460" y1="472" x2="460" y2="498"/>
+  <polygon class="arrowHeadExternal" points="460,512 448,498 472,498"/>
 
   <!-- Third party -->
   <rect class="box-third" x="300" y="520" width="320" height="120" rx="24" filter="url(#softShadow)"/>
