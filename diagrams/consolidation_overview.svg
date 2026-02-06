@@ -8,7 +8,7 @@
       <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#202124" flood-opacity="0.08"/>
     </filter>
     <clipPath id="cardClip">
-      <rect width="164" height="144" rx="8"/>
+      <rect width="140" height="144" rx="8"/>
     </clipPath>
   </defs>
 
@@ -22,57 +22,57 @@
   <text class="t" x="250" y="23" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#5f6368">企業グループ</text>
 
   <!-- ===== Parent company card ===== -->
-  <g transform="translate(32, 44)" filter="url(#s)">
-    <rect width="164" height="144" rx="8" fill="#fff" stroke="#1a73e8" stroke-width="1.6"/>
-    <rect width="164" height="26" fill="#1a73e8" clip-path="url(#cardClip)"/>
-    <text class="t" x="82" y="13" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="800" fill="#fff">親会社</text>
+  <g transform="translate(44, 44)" filter="url(#s)">
+    <rect width="140" height="144" rx="8" fill="#fff" stroke="#1a73e8" stroke-width="1.6"/>
+    <rect width="140" height="26" fill="#1a73e8" clip-path="url(#cardClip)"/>
+    <text class="t" x="70" y="13" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="800" fill="#fff">親会社</text>
 
-    <text class="t" x="144" y="58" text-anchor="end" font-size="14" font-weight="700" fill="#5f6368">売上</text>
-    <line x1="12" y1="72" x2="152" y2="72" stroke="#dadce0" stroke-width="1"/>
-    <text class="t" x="144" y="92" text-anchor="end" font-size="14" font-weight="700" fill="#5f6368">貸付</text>
-    <line x1="12" y1="104" x2="152" y2="104" stroke="#dadce0" stroke-width="1"/>
-    <text class="t" x="144" y="124" text-anchor="end" font-size="14" font-weight="700" fill="#5f6368">配当</text>
+    <text class="t" x="124" y="58" text-anchor="end" font-size="14" font-weight="700" fill="#5f6368">売上</text>
+    <line x1="12" y1="72" x2="128" y2="72" stroke="#dadce0" stroke-width="1"/>
+    <text class="t" x="124" y="92" text-anchor="end" font-size="14" font-weight="700" fill="#5f6368">貸付</text>
+    <line x1="12" y1="104" x2="128" y2="104" stroke="#dadce0" stroke-width="1"/>
+    <text class="t" x="124" y="124" text-anchor="end" font-size="14" font-weight="700" fill="#5f6368">配当</text>
   </g>
 
   <!-- ===== Child company card ===== -->
-  <g transform="translate(304, 44)" filter="url(#s)">
-    <rect width="164" height="144" rx="8" fill="#fff" stroke="#34a853" stroke-width="1.6"/>
-    <rect width="164" height="26" fill="#34a853" clip-path="url(#cardClip)"/>
-    <text class="t" x="82" y="13" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="800" fill="#fff">子会社</text>
+  <g transform="translate(316, 44)" filter="url(#s)">
+    <rect width="140" height="144" rx="8" fill="#fff" stroke="#34a853" stroke-width="1.6"/>
+    <rect width="140" height="26" fill="#34a853" clip-path="url(#cardClip)"/>
+    <text class="t" x="70" y="13" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="800" fill="#fff">子会社</text>
 
-    <text class="t" x="20" y="58" font-size="14" font-weight="700" fill="#5f6368">仕入</text>
-    <line x1="12" y1="72" x2="152" y2="72" stroke="#dadce0" stroke-width="1"/>
-    <text class="t" x="20" y="92" font-size="14" font-weight="700" fill="#5f6368">借入</text>
-    <line x1="12" y1="104" x2="152" y2="104" stroke="#dadce0" stroke-width="1"/>
-    <text class="t" x="20" y="124" font-size="14" font-weight="700" fill="#5f6368">配当支払</text>
+    <text class="t" x="16" y="58" font-size="14" font-weight="700" fill="#5f6368">仕入</text>
+    <line x1="12" y1="72" x2="128" y2="72" stroke="#dadce0" stroke-width="1"/>
+    <text class="t" x="16" y="92" font-size="14" font-weight="700" fill="#5f6368">借入</text>
+    <line x1="12" y1="104" x2="128" y2="104" stroke="#dadce0" stroke-width="1"/>
+    <text class="t" x="16" y="124" font-size="14" font-weight="700" fill="#5f6368">配当支払</text>
   </g>
 
   <!-- ===== Internal transactions with correspondence ===== -->
   <text class="t" x="250" y="82" text-anchor="middle" font-size="15" font-weight="800" fill="#ea4335">内部取引</text>
 
   <!-- Arrow 1: 売上 ↔ 仕入 -->
-  <polygon points="204,100 216,94 216,106" fill="#9aa0a6"/>
-  <line x1="216" y1="100" x2="284" y2="100" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
-  <polygon points="296,100 284,94 284,106" fill="#9aa0a6"/>
-  <circle cx="250" cy="100" r="10" fill="#fff"/>
-  <line x1="243" y1="93" x2="257" y2="107" stroke="#ea4335" stroke-width="3" stroke-linecap="round"/>
-  <line x1="257" y1="93" x2="243" y2="107" stroke="#ea4335" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="192,100 204,94 204,106" fill="#9aa0a6"/>
+  <line x1="204" y1="100" x2="296" y2="100" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="308,100 296,94 296,106" fill="#9aa0a6"/>
+  <circle cx="250" cy="100" r="12" fill="#fff"/>
+  <line x1="242" y1="92" x2="258" y2="108" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="258" y1="92" x2="242" y2="108" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- Arrow 2: 貸付 ↔ 借入 -->
-  <polygon points="204,132 216,126 216,138" fill="#9aa0a6"/>
-  <line x1="216" y1="132" x2="284" y2="132" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
-  <polygon points="296,132 284,126 284,138" fill="#9aa0a6"/>
-  <circle cx="250" cy="132" r="10" fill="#fff"/>
-  <line x1="243" y1="125" x2="257" y2="139" stroke="#ea4335" stroke-width="3" stroke-linecap="round"/>
-  <line x1="257" y1="125" x2="243" y2="139" stroke="#ea4335" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="192,132 204,126 204,138" fill="#9aa0a6"/>
+  <line x1="204" y1="132" x2="296" y2="132" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="308,132 296,126 296,138" fill="#9aa0a6"/>
+  <circle cx="250" cy="132" r="12" fill="#fff"/>
+  <line x1="242" y1="124" x2="258" y2="140" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="258" y1="124" x2="242" y2="140" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- Arrow 3: 配当 ↔ 配当支払 -->
-  <polygon points="204,164 216,158 216,170" fill="#9aa0a6"/>
-  <line x1="216" y1="164" x2="284" y2="164" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
-  <polygon points="296,164 284,158 284,170" fill="#9aa0a6"/>
-  <circle cx="250" cy="164" r="10" fill="#fff"/>
-  <line x1="243" y1="157" x2="257" y2="171" stroke="#ea4335" stroke-width="3" stroke-linecap="round"/>
-  <line x1="257" y1="157" x2="243" y2="171" stroke="#ea4335" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="192,164 204,158 204,170" fill="#9aa0a6"/>
+  <line x1="204" y1="164" x2="296" y2="164" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="308,164 296,158 296,170" fill="#9aa0a6"/>
+  <circle cx="250" cy="164" r="12" fill="#fff"/>
+  <line x1="242" y1="156" x2="258" y2="172" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="258" y1="156" x2="242" y2="172" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- ===== External transactions ===== -->
   <text class="t" x="250" y="232" text-anchor="middle" font-size="12" font-weight="800" fill="#5f6368">外部取引</text>
