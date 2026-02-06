@@ -1,138 +1,135 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="840" viewBox="0 0 920 840">
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="370" viewBox="0 0 500 370">
   <defs>
     <style>
       .t { font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif; }
-
-      .frame { fill: #f5f7fa; }
-      .box-parent { fill: #ffffff; stroke: #1a73e8; stroke-width: 2.8; }
-      .box-child { fill: #ffffff; stroke: #9aa0a6; stroke-width: 2.8; }
-
-      .title { font-weight: 900; font-size: 36px; fill: #3c4043; }
-      .title-parent { fill: #1a73e8; }
-      .title-child { fill: #5f6368; }
-
-      .card { fill: #ffffff; stroke: #cfd4dc; stroke-width: 2.4; }
-      .card-accent-blue { fill: #1a73e8; }
-      .card-accent-gray { fill: #9aa0a6; }
-      .step-tag { font-weight: 900; font-size: 28px; fill: #6b7280; }
-      .step-title { font-weight: 900; font-size: 42px; fill: #111827; }
-
-      .result-card { fill: #ffffff; stroke: #9aa0a6; stroke-width: 2.8; }
-      .result-title { font-weight: 900; font-size: 34px; fill: #111827; }
-
-      .flow { stroke: #8f99a6; stroke-width: 6.5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
-      .arrow-line { stroke: #8f99a6; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
-      .arrow-head { fill: #8f99a6; }
-
-      .icon-blue { stroke: #1a73e8; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
-      .icon-blue-fill { fill: #1a73e8; }
-      .icon-gray { stroke: #9aa0a6; stroke-width: 3.6; stroke-linecap: round; stroke-linejoin: round; fill: none; }
-      .icon-inner { stroke: #c7ccd1; stroke-width: 2.4; stroke-linecap: round; fill: none; }
-      .icon-inner-blue { stroke: #8ab4f8; stroke-width: 2.4; stroke-linecap: round; fill: none; }
     </style>
-
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#202124" flood-opacity="0.08"/>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#202124" flood-opacity="0.08"/>
     </filter>
-
-    <symbol id="arrowDown" viewBox="0 0 28 34">
-      <path class="arrow-line" d="M14 0v16" />
-      <polygon class="arrow-head" points="14,34 0,18 28,18" />
-    </symbol>
-
-    <symbol id="icon-doc-blue" viewBox="0 0 64 64">
-      <path class="icon-blue" d="M16 10h26l8 8v36H16z"/>
-      <path class="icon-blue" d="M42 10v16h16"/>
-      <path class="icon-inner-blue" d="M22 30h20"/>
-      <path class="icon-inner-blue" d="M22 38h20"/>
-      <path class="icon-inner-blue" d="M22 46h16"/>
-    </symbol>
-
-    <symbol id="icon-doc-gray" viewBox="0 0 64 64">
-      <path class="icon-gray" d="M16 10h26l8 8v36H16z"/>
-      <path class="icon-gray" d="M42 10v16h16"/>
-      <path class="icon-inner" d="M22 30h20"/>
-      <path class="icon-inner" d="M22 38h20"/>
-      <path class="icon-inner" d="M22 46h16"/>
-    </symbol>
-
-    <symbol id="icon-clip" viewBox="0 0 64 64">
-      <path class="icon-blue" d="M46 18L27 37a8 8 0 1 1-11-11l19-19a11 11 0 1 1 16 16L29 45a14 14 0 1 1-20-20l16-16"/>
-      <path class="icon-blue" d="M39 21L23 37a5 5 0 1 1-7-7l17-17"/>
-    </symbol>
-
-    <symbol id="icon-eraser" viewBox="0 0 64 64">
-      <polygon class="icon-blue-fill" points="14,42 32,24 56,48 38,60 22,60"/>
-      <polygon points="28,36 38,26 50,38 40,48" fill="#ffffff" opacity="0.95"/>
-      <polygon class="icon-blue" points="14,42 32,24 56,48 38,60 22,60"/>
-      <path class="icon-blue" d="M32 24l24 24"/>
-      <path class="icon-blue" d="M12 60h30"/>
-    </symbol>
-
-    <symbol id="icon-swap" viewBox="0 0 64 64">
-      <path class="icon-blue" d="M10 20h34"/>
-      <polygon class="icon-blue-fill" points="44,12 56,20 44,28"/>
-      <path class="icon-blue" d="M54 44H20"/>
-      <polygon class="icon-blue-fill" points="20,36 8,44 20,52"/>
-      <path class="icon-blue" d="M12 20h8"/>
-      <path class="icon-blue" d="M44 44h8"/>
-    </symbol>
   </defs>
 
-  <rect x="0" y="0" width="920" height="840" fill="#ffffff"/>
-  <rect class="frame" x="100" y="20" width="720" height="800" rx="32"/>
+  <rect width="500" height="370" fill="#ffffff"/>
+  <rect x="16" y="6" width="468" height="358" rx="18" fill="#f8f9fa" stroke="#e8eaed" stroke-width="1"/>
 
-  <g>
-    <rect class="box-parent" x="130" y="56" width="280" height="128" rx="22" filter="url(#softShadow)"/>
-    <rect class="box-child" x="510" y="56" width="280" height="128" rx="22" filter="url(#softShadow)"/>
+  <!-- ===== TOP: Individual FS Documents ===== -->
 
-    <text class="t title title-parent" x="270" y="100" text-anchor="middle" dominant-baseline="middle">親会社</text>
-    <text class="t title title-child" x="650" y="100" text-anchor="middle" dominant-baseline="middle">子会社</text>
-
-    <use href="#icon-doc-blue" x="233" y="118" width="46" height="46"/>
-    <use href="#icon-doc-blue" x="269" y="118" width="46" height="46"/>
-    <use href="#icon-doc-gray" x="613" y="118" width="46" height="46"/>
-    <use href="#icon-doc-gray" x="649" y="118" width="46" height="46"/>
+  <!-- 親会社 個別FS -->
+  <g transform="translate(56, 14)">
+    <rect x="3" y="3" width="118" height="62" rx="6" fill="#dce8f8" stroke="#b8d0f0" stroke-width="0.4"/>
+    <g filter="url(#s)">
+      <rect width="118" height="62" rx="6" fill="#fff" stroke="#1a73e8" stroke-width="1.6"/>
+      <rect width="118" height="20" rx="6" fill="#1a73e8"/>
+      <rect y="12" width="118" height="8" fill="#1a73e8"/>
+      <text class="t" x="59" y="10" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="800" fill="#fff">親会社 個別FS</text>
+      <rect x="9" y="26" width="40" height="4" rx="2" fill="#e8eef8"/>
+      <rect x="55" y="26" width="54" height="4" rx="2" fill="#f1f3f4"/>
+      <line x1="9" y1="36" x2="109" y2="36" stroke="#1a73e8" stroke-width="0.5" opacity="0.15"/>
+      <line x1="9" y1="44" x2="86" y2="44" stroke="#e8eaed" stroke-width="1"/>
+      <line x1="9" y1="52" x2="56" y2="52" stroke="#e8eaed" stroke-width="1"/>
+    </g>
   </g>
 
-  <path class="flow" d="M270 184V220" />
-  <path class="flow" d="M650 184V220" />
-  <path class="flow" d="M270 220H650" />
-  <use href="#arrowDown" x="446" y="222" width="28" height="34" />
-
-  <g>
-    <rect class="card" x="130" y="260" width="660" height="96" rx="16" filter="url(#softShadow)"/>
-    <rect class="card-accent-blue" x="130" y="260" width="10" height="96" rx="16"/>
-    <text class="t step-tag" x="160" y="308" dominant-baseline="middle">STEP1</text>
-    <text class="t step-title" x="315" y="308" dominant-baseline="middle">合算</text>
-    <use href="#icon-clip" x="722" y="279" width="56" height="56"/>
+  <!-- 子会社 個別FS -->
+  <g transform="translate(306, 14)">
+    <rect x="3" y="3" width="118" height="62" rx="6" fill="#e6f4ea" stroke="#a8dab5" stroke-width="0.4"/>
+    <g filter="url(#s)">
+      <rect width="118" height="62" rx="6" fill="#fff" stroke="#34a853" stroke-width="1.6"/>
+      <rect width="118" height="20" rx="6" fill="#34a853"/>
+      <rect y="12" width="118" height="8" fill="#34a853"/>
+      <text class="t" x="59" y="10" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="800" fill="#fff">子会社 個別FS</text>
+      <rect x="9" y="26" width="40" height="4" rx="2" fill="#e6f4ea"/>
+      <rect x="55" y="26" width="54" height="4" rx="2" fill="#f1f3f4"/>
+      <line x1="9" y1="36" x2="109" y2="36" stroke="#34a853" stroke-width="0.5" opacity="0.15"/>
+      <line x1="9" y1="44" x2="86" y2="44" stroke="#e8eaed" stroke-width="1"/>
+      <line x1="9" y1="52" x2="56" y2="52" stroke="#e8eaed" stroke-width="1"/>
+    </g>
   </g>
 
-  <use href="#arrowDown" x="446" y="372" width="28" height="34" />
+  <!-- Converging flow -->
+  <path d="M115,78 L115,88 Q115,96 125,96 L250,96" fill="none" stroke="#9aa0a6" stroke-width="2"/>
+  <path d="M365,78 L365,88 Q365,96 355,96 L250,96" fill="none" stroke="#9aa0a6" stroke-width="2"/>
+  <line x1="250" y1="96" x2="250" y2="104" stroke="#9aa0a6" stroke-width="2"/>
+  <polygon points="250,112 244,104 256,104" fill="#9aa0a6"/>
 
-  <g>
-    <rect class="card" x="130" y="410" width="660" height="96" rx="16" filter="url(#softShadow)"/>
-    <rect class="card-accent-blue" x="130" y="410" width="10" height="96" rx="16"/>
-    <text class="t step-tag" x="160" y="458" dominant-baseline="middle">STEP2</text>
-    <text class="t step-title" x="315" y="458" dominant-baseline="middle">連結消去・修正</text>
-    <use href="#icon-eraser" x="722" y="429" width="56" height="56"/>
+  <!-- ===== STEP 1: 合算 ===== -->
+  <g transform="translate(40, 114)">
+    <rect width="420" height="50" rx="12" fill="#fff" stroke="#e0e4ea" stroke-width="1.2" filter="url(#s)"/>
+    <circle cx="32" cy="25" r="15" fill="#1a73e8"/>
+    <text class="t" x="32" y="25" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="900" fill="#fff">1</text>
+    <text class="t" x="60" y="25" dominant-baseline="middle" font-size="17" font-weight="900" fill="#3c4043">合算</text>
+    <!-- Illustration: doc + doc → combined doc -->
+    <g transform="translate(284, 9)">
+      <rect x="0" y="4" width="18" height="24" rx="2" fill="#e8eef8" stroke="#1a73e8" stroke-width="0.9"/>
+      <line x1="3" y1="10" x2="15" y2="10" stroke="#b8d0f0" stroke-width="0.7"/>
+      <line x1="3" y1="15" x2="15" y2="15" stroke="#b8d0f0" stroke-width="0.7"/>
+      <line x1="3" y1="20" x2="11" y2="20" stroke="#b8d0f0" stroke-width="0.7"/>
+      <text class="t" x="25" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#9aa0a6">+</text>
+      <rect x="32" y="4" width="18" height="24" rx="2" fill="#e6f4ea" stroke="#34a853" stroke-width="0.9"/>
+      <line x1="35" y1="10" x2="47" y2="10" stroke="#a8dab5" stroke-width="0.7"/>
+      <line x1="35" y1="15" x2="47" y2="15" stroke="#a8dab5" stroke-width="0.7"/>
+      <line x1="35" y1="20" x2="43" y2="20" stroke="#a8dab5" stroke-width="0.7"/>
+      <line x1="58" y1="16" x2="66" y2="16" stroke="#9aa0a6" stroke-width="1.4" stroke-linecap="round"/>
+      <polygon points="68,16 63,12 63,20" fill="#9aa0a6"/>
+      <rect x="76" y="0" width="24" height="30" rx="3" fill="#e8eef8" stroke="#1a73e8" stroke-width="1.1"/>
+      <line x1="80" y1="7" x2="96" y2="7" stroke="#b8d0f0" stroke-width="0.7"/>
+      <line x1="80" y1="12" x2="96" y2="12" stroke="#b8d0f0" stroke-width="0.7"/>
+      <line x1="80" y1="17" x2="96" y2="17" stroke="#b8d0f0" stroke-width="0.7"/>
+      <line x1="80" y1="22" x2="90" y2="22" stroke="#b8d0f0" stroke-width="0.7"/>
+    </g>
   </g>
 
-  <use href="#arrowDown" x="446" y="522" width="28" height="34" />
+  <!-- Arrow 1→2 -->
+  <line x1="250" y1="166" x2="250" y2="174" stroke="#9aa0a6" stroke-width="2"/>
+  <polygon points="250,182 244,174 256,174" fill="#9aa0a6"/>
 
-  <g>
-    <rect class="card" x="130" y="560" width="660" height="96" rx="16" filter="url(#softShadow)"/>
-    <rect class="card-accent-gray" x="130" y="560" width="10" height="96" rx="16"/>
-    <text class="t step-tag" x="160" y="608" dominant-baseline="middle">STEP3</text>
-    <text class="t step-title" x="315" y="608" dominant-baseline="middle">組替</text>
-    <use href="#icon-swap" x="722" y="579" width="56" height="56"/>
+  <!-- ===== STEP 2: 連結消去・修正 ===== -->
+  <g transform="translate(40, 184)">
+    <rect width="420" height="50" rx="12" fill="#fff" stroke="#e0e4ea" stroke-width="1.2" filter="url(#s)"/>
+    <circle cx="32" cy="25" r="15" fill="#1a73e8"/>
+    <text class="t" x="32" y="25" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="900" fill="#fff">2</text>
+    <text class="t" x="60" y="25" dominant-baseline="middle" font-size="17" font-weight="900" fill="#3c4043">連結消去・修正</text>
+    <!-- Illustration: doc with × mark -->
+    <g transform="translate(348, 7)">
+      <rect x="0" y="0" width="26" height="32" rx="3" fill="#fff" stroke="#9aa0a6" stroke-width="1.1"/>
+      <line x1="4" y1="8" x2="22" y2="8" stroke="#e8eaed" stroke-width="1"/>
+      <line x1="4" y1="14" x2="22" y2="14" stroke="#ea4335" stroke-width="1.1" opacity="0.45"/>
+      <line x1="4" y1="20" x2="22" y2="20" stroke="#e8eaed" stroke-width="1"/>
+      <line x1="4" y1="26" x2="14" y2="26" stroke="#e8eaed" stroke-width="1"/>
+      <line x1="31" y1="8" x2="42" y2="20" stroke="#ea4335" stroke-width="2.4" stroke-linecap="round"/>
+      <line x1="42" y1="8" x2="31" y2="20" stroke="#ea4335" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
   </g>
 
-  <use href="#arrowDown" x="446" y="672" width="28" height="34" />
+  <!-- Arrow 2→3 -->
+  <line x1="250" y1="236" x2="250" y2="244" stroke="#9aa0a6" stroke-width="2"/>
+  <polygon points="250,252 244,244 256,244" fill="#9aa0a6"/>
 
-  <g>
-    <rect class="result-card" x="250" y="730" width="420" height="50" rx="14" filter="url(#softShadow)"/>
-    <text class="t result-title" x="460" y="755" text-anchor="middle" dominant-baseline="middle">連結財務諸表</text>
-    <use href="#icon-doc-gray" x="632" y="738" width="34" height="34"/>
+  <!-- ===== STEP 3: 組替 ===== -->
+  <g transform="translate(40, 254)">
+    <rect width="420" height="50" rx="12" fill="#fff" stroke="#e0e4ea" stroke-width="1.2" filter="url(#s)"/>
+    <circle cx="32" cy="25" r="15" fill="#1a73e8"/>
+    <text class="t" x="32" y="25" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="900" fill="#fff">3</text>
+    <text class="t" x="60" y="25" dominant-baseline="middle" font-size="17" font-weight="900" fill="#3c4043">組替</text>
+    <!-- Illustration: bars rearranged -->
+    <g transform="translate(308, 9)">
+      <rect x="0" y="3" width="24" height="6" rx="2" fill="#dadce0"/>
+      <rect x="0" y="13" width="14" height="6" rx="2" fill="#dadce0"/>
+      <rect x="0" y="23" width="20" height="6" rx="2" fill="#dadce0"/>
+      <line x1="32" y1="16" x2="40" y2="16" stroke="#9aa0a6" stroke-width="1.4" stroke-linecap="round"/>
+      <polygon points="42,16 37,12 37,20" fill="#9aa0a6"/>
+      <rect x="50" y="3" width="14" height="6" rx="2" fill="#5f6368"/>
+      <rect x="50" y="13" width="24" height="6" rx="2" fill="#5f6368"/>
+      <rect x="50" y="23" width="20" height="6" rx="2" fill="#5f6368"/>
+    </g>
+  </g>
+
+  <!-- Arrow 3→result -->
+  <line x1="250" y1="306" x2="250" y2="312" stroke="#9aa0a6" stroke-width="2"/>
+  <polygon points="250,320 244,312 256,312" fill="#9aa0a6"/>
+
+  <!-- ===== RESULT: 連結財務諸表 ===== -->
+  <g transform="translate(120, 322)" filter="url(#s)">
+    <rect width="260" height="34" rx="17" fill="#1a73e8"/>
+    <text class="t" x="130" y="17" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="800" fill="#fff">連結財務諸表</text>
   </g>
 </svg>
