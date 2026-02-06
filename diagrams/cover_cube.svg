@@ -1,122 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="70 40 470 520">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="520" viewBox="0 0 480 520">
   <defs>
-    <style>
-      /* Gaps between tiles (Blue lines) - Thicker and darker for Rubik's feel */
-      .tileGap { 
-        stroke: #185abc; /* Darker, mechanical blue */
-        stroke-width: 9; /* Thicker gaps to separate blocks distinctly */
-        stroke-linejoin: round; /* Rounded corners for plastic feel */
-        stroke-linecap: round; 
-      }
-      
-      /* Stronger highlight on block edges for 3D bevel effect */
-      .tileEdge { 
-        fill: none; 
-        stroke: rgba(255, 255, 255, 0.6); 
-        stroke-width: 1.5; 
-        stroke-linejoin: round; 
-        stroke-linecap: round;
-      }
-
-      /* Base darker blue fill for the structure underneath */
-      .coreFill { fill: #174ea6; }
-    </style>
-
-    <!-- Top Gradient: Glossy plastic look -->
-    <linearGradient id="topGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#dce5f0"/>
+    <!-- Piece gradients (subtle 3D lighting) -->
+    <linearGradient id="blueGrad" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#4a9af5"/>
+      <stop offset="1" stop-color="#1667d0"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#57c97a"/>
+      <stop offset="1" stop-color="#2a9147"/>
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#fdd663"/>
+      <stop offset="1" stop-color="#f0a800"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#f28b82"/>
+      <stop offset="1" stop-color="#d93025"/>
     </linearGradient>
 
-    <!-- Left Gradient: Distinct side lighting -->
-    <linearGradient id="leftGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f5f7f9"/>
-      <stop offset="1" stop-color="#b0b7c0"/>
-    </linearGradient>
-
-    <!-- Right Gradient: Shadowed side -->
-    <linearGradient id="rightGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#cbd0d6"/>
-      <stop offset="1" stop-color="#9aa0a6"/>
-    </linearGradient>
-
-    <!-- Shadow under the cube -->
-    <radialGradient id="groundShadow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#202124" stop-opacity="0.2"/>
-      <stop offset="0.7" stop-color="#202124" stop-opacity="0.05"/>
-      <stop offset="1" stop-color="#202124" stop-opacity="0"/>
-    </radialGradient>
+    <filter id="pieceShadow" x="-5%" y="-3%" width="112%" height="116%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#202124" flood-opacity="0.10"/>
+    </filter>
+    <filter id="floatShadow" x="-8%" y="-8%" width="125%" height="135%">
+      <feDropShadow dx="3" dy="8" stdDeviation="8" flood-color="#202124" flood-opacity="0.22"/>
+    </filter>
   </defs>
 
-  <g transform="translate(300 80)">
-    <!-- Shadow -->
-    <ellipse cx="0" cy="445" rx="220" ry="60" fill="url(#groundShadow)" opacity="0.8"/>
+  <g transform="translate(100, 120)">
 
-    <!-- Base Structure (Dark Blue background) -->
-    <polygon points="0,0 200,100 0,200 -200,100" class="coreFill"/> 
-    <polygon points="-200,100 0,200 0,420 -200,320" class="coreFill"/> 
-    <polygon points="200,100 0,200 0,420 200,320" class="coreFill"/>
+    <!-- Piece 1 — Blue (top-left, assembled) -->
+    <path d="
+      M 0,0 L 140,0
+      L 140,45 C 148,45 164,52 164,70 C 164,88 148,95 140,95
+      L 140,140
+      L 95,140 C 95,148 88,164 70,164 C 52,164 45,148 45,140
+      L 0,140 Z"
+      fill="url(#blueGrad)" stroke="white" stroke-width="2.5"
+      stroke-linejoin="round" filter="url(#pieceShadow)"/>
 
-    <!-- LEFT FACE (3x3 Grid) -->
-    <g id="faceLeft">
-      <!-- Col 1 -->
-      <polygon class="tileGap" points="-200,100 -133.3,133.3 -133.3,206.6 -200,173.3" fill="url(#leftGrad)"/>
-      <polygon class="tileGap" points="-133.3,133.3 -66.6,166.6 -66.6,240 -133.3,206.6" fill="url(#leftGrad)"/>
-      <polygon class="tileGap" points="-66.6,166.6 0,200 0,273.3 -66.6,240" fill="url(#leftGrad)"/>
+    <!-- Piece 2 — Green (top-right, assembled) -->
+    <path d="
+      M 140,0 L 280,0
+      L 280,140
+      L 235,140 C 235,148 228,164 210,164 C 192,164 185,148 185,140
+      L 140,140
+      L 140,95 C 148,95 164,88 164,70 C 164,52 148,45 140,45
+      Z"
+      fill="url(#greenGrad)" stroke="white" stroke-width="2.5"
+      stroke-linejoin="round" filter="url(#pieceShadow)"/>
 
-      <!-- Col 2 -->
-      <polygon class="tileGap" points="-200,173.3 -133.3,206.6 -133.3,280 -200,246.6" fill="url(#leftGrad)"/>
-      <polygon class="tileGap" points="-133.3,206.6 -66.6,240 -66.6,313.3 -133.3,280" fill="url(#leftGrad)"/>
-      <polygon class="tileGap" points="-66.6,240 0,273.3 0,346.6 -66.6,313.3" fill="url(#leftGrad)"/>
+    <!-- Piece 3 — Yellow (bottom-left, assembled) -->
+    <path d="
+      M 0,140
+      L 45,140 C 45,148 52,164 70,164 C 88,164 95,148 95,140
+      L 140,140
+      L 140,185 C 148,185 164,192 164,210 C 164,228 148,235 140,235
+      L 140,280 L 0,280 Z"
+      fill="url(#yellowGrad)" stroke="white" stroke-width="2.5"
+      stroke-linejoin="round" filter="url(#pieceShadow)"/>
 
-      <!-- Col 3 -->
-      <polygon class="tileGap" points="-200,246.6 -133.3,280 -133.3,353.3 -200,320" fill="url(#leftGrad)"/>
-      <polygon class="tileGap" points="-133.3,280 -66.6,313.3 -66.6,386.6 -133.3,353.3" fill="url(#leftGrad)"/>
-      <polygon class="tileGap" points="-66.6,313.3 0,346.6 0,420 -66.6,386.6" fill="url(#leftGrad)"/>
-    </g>
-
-    <!-- RIGHT FACE (3x3 Grid) -->
-    <g id="faceRight">
-      <!-- Col 1 -->
-      <polygon class="tileGap" points="200,100 133.3,133.3 133.3,206.6 200,173.3" fill="url(#rightGrad)"/>
-      <polygon class="tileGap" points="133.3,133.3 66.6,166.6 66.6,240 133.3,206.6" fill="url(#rightGrad)"/>
-      <polygon class="tileGap" points="66.6,166.6 0,200 0,273.3 66.6,240" fill="url(#rightGrad)"/>
-
-      <!-- Col 2 -->
-      <polygon class="tileGap" points="200,173.3 133.3,206.6 133.3,280 200,246.6" fill="url(#rightGrad)"/>
-      <polygon class="tileGap" points="133.3,206.6 66.6,240 66.6,313.3 133.3,280" fill="url(#rightGrad)"/>
-      <polygon class="tileGap" points="66.6,240 0,273.3 0,346.6 66.6,313.3" fill="url(#rightGrad)"/>
-
-      <!-- Col 3 -->
-      <polygon class="tileGap" points="200,246.6 133.3,280 133.3,353.3 200,320" fill="url(#rightGrad)"/>
-      <polygon class="tileGap" points="133.3,280 66.6,313.3 66.6,386.6 133.3,353.3" fill="url(#rightGrad)"/>
-      <polygon class="tileGap" points="66.6,313.3 0,346.6 0,420 66.6,386.6" fill="url(#rightGrad)"/>
-    </g>
-
-    <!-- TOP FACE (3x3 Grid) -->
-    <g id="faceTop">
-      <!-- Row 1 -->
-      <polygon class="tileGap" points="0,0 66.6,33.3 0,66.6 -66.6,33.3" fill="url(#topGrad)"/>
-      <polygon class="tileGap" points="66.6,33.3 133.3,66.6 66.6,100 0,66.6" fill="url(#topGrad)"/>
-      <polygon class="tileGap" points="-66.6,33.3 0,66.6 -66.6,100 -133.3,66.6" fill="url(#topGrad)"/>
-      
-      <!-- Row 2 -->
-      <polygon class="tileGap" points="133.3,66.6 200,100 133.3,133.3 66.6,100" fill="url(#topGrad)"/>
-      <polygon class="tileGap" points="-133.3,66.6 -66.6,100 -133.3,133.3 -200,100" fill="url(#topGrad)"/>
-      
-      <!-- Center Row -->
-      <polygon class="tileGap" points="66.6,100 133.3,133.3 66.6,166.6 0,133.3" fill="url(#topGrad)"/>
-      <polygon class="tileGap" points="-66.6,100 0,133.3 -66.6,166.6 -133.3,133.3" fill="url(#topGrad)"/>
-      <polygon class="tileGap" points="0,66.6 66.6,100 0,133.3 -66.6,100" fill="url(#topGrad)"/>
-
-      <!-- Row 3 -->
-      <polygon class="tileGap" points="0,133.3 66.6,166.6 0,200 -66.6,166.6" fill="url(#topGrad)"/>
-    </g>
-
-    <!-- Optional Edge Highlights (Bevel effect) -->
-    <g pointer-events="none" opacity="0.6">
-        <!-- Add simple inner highlights to suggest chamfered edges -->
-        <path d="M-195,105 L-138,136 M-128,140 L-71,170" stroke="white" stroke-width="2" opacity="0.5" />
+    <!-- Piece 4 — Red (bottom-right, floating / being placed) -->
+    <g transform="translate(16,-18) rotate(-4, 210, 210)">
+      <path d="
+        M 140,140
+        L 185,140 C 185,148 192,164 210,164 C 228,164 235,148 235,140
+        L 280,140
+        L 280,280 L 140,280
+        L 140,235 C 148,235 164,228 164,210 C 164,192 148,185 140,185
+        Z"
+        fill="url(#redGrad)" stroke="white" stroke-width="2.5"
+        stroke-linejoin="round" filter="url(#floatShadow)"/>
     </g>
 
   </g>
