@@ -1,75 +1,150 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="480" height="520" viewBox="0 0 480 520">
   <defs>
-    <!-- Piece gradients (subtle 3D lighting) -->
-    <linearGradient id="blueGrad" x1="0.1" y1="0" x2="0.9" y2="1">
-      <stop offset="0" stop-color="#4a9af5"/>
-      <stop offset="1" stop-color="#1667d0"/>
+    <!-- Top-face gradients (brightest) -->
+    <linearGradient id="blueTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6db3f8"/>
+      <stop offset="1" stop-color="#4a9af5"/>
     </linearGradient>
-    <linearGradient id="greenGrad" x1="0.1" y1="0" x2="0.9" y2="1">
-      <stop offset="0" stop-color="#57c97a"/>
-      <stop offset="1" stop-color="#2a9147"/>
+    <linearGradient id="greenTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7bd998"/>
+      <stop offset="1" stop-color="#57c97a"/>
     </linearGradient>
-    <linearGradient id="yellowGrad" x1="0.1" y1="0" x2="0.9" y2="1">
-      <stop offset="0" stop-color="#fdd663"/>
-      <stop offset="1" stop-color="#f0a800"/>
+    <linearGradient id="yellowTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fee48a"/>
+      <stop offset="1" stop-color="#fdd663"/>
     </linearGradient>
-    <linearGradient id="redGrad" x1="0.1" y1="0" x2="0.9" y2="1">
-      <stop offset="0" stop-color="#f28b82"/>
-      <stop offset="1" stop-color="#d93025"/>
+    <linearGradient id="redTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7a9a3"/>
+      <stop offset="1" stop-color="#f28b82"/>
     </linearGradient>
 
-    <filter id="pieceShadow" x="-5%" y="-3%" width="112%" height="116%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#202124" flood-opacity="0.10"/>
+    <!-- Left-face colors (medium) -->
+    <linearGradient id="blueLeft" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#3680d6"/>
+      <stop offset="1" stop-color="#1a5bb8"/>
+    </linearGradient>
+    <linearGradient id="greenLeft" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#35a558"/>
+      <stop offset="1" stop-color="#228a3e"/>
+    </linearGradient>
+    <linearGradient id="yellowLeft" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#e8b400"/>
+      <stop offset="1" stop-color="#c89800"/>
+    </linearGradient>
+    <linearGradient id="redLeft" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#cc3a2e"/>
+      <stop offset="1" stop-color="#b22d22"/>
+    </linearGradient>
+
+    <!-- Right-face colors (darkest) -->
+    <linearGradient id="blueRight" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#2968b8"/>
+      <stop offset="1" stop-color="#164d9a"/>
+    </linearGradient>
+    <linearGradient id="greenRight" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#28854a"/>
+      <stop offset="1" stop-color="#1a6e36"/>
+    </linearGradient>
+    <linearGradient id="yellowRight" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#c89800"/>
+      <stop offset="1" stop-color="#a67e00"/>
+    </linearGradient>
+    <linearGradient id="redRight" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#a82820"/>
+      <stop offset="1" stop-color="#8c201a"/>
+    </linearGradient>
+
+    <filter id="blockShadow" x="-10%" y="-5%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#202124" flood-opacity="0.13"/>
     </filter>
-    <filter id="floatShadow" x="-8%" y="-8%" width="125%" height="135%">
-      <feDropShadow dx="3" dy="8" stdDeviation="8" flood-color="#202124" flood-opacity="0.22"/>
+    <filter id="floatShadow" x="-15%" y="-10%" width="140%" height="150%">
+      <feDropShadow dx="4" dy="10" stdDeviation="10" flood-color="#202124" flood-opacity="0.18"/>
     </filter>
   </defs>
 
-  <g transform="translate(100, 120)">
+  <!--
+    Isometric cube grid: 2x2x2 blocks with one block floating.
+    Isometric unit vectors:
+      x-axis: (+86, +50)   i.e. 30-degree right
+      y-axis: (-86, +50)   i.e. 30-degree left
+      z-axis: (0, -100)    i.e. straight up
+    Block size s = 72
+  -->
 
-    <!-- Piece 1 — Blue (top-left, assembled) -->
-    <path d="
-      M 0,0 L 140,0
-      L 140,45 C 148,45 164,52 164,70 C 164,88 148,95 140,95
-      L 140,140
-      L 95,140 C 95,148 88,164 70,164 C 52,164 45,148 45,140
-      L 0,140 Z"
-      fill="url(#blueGrad)" stroke="white" stroke-width="2.5"
-      stroke-linejoin="round" filter="url(#pieceShadow)"/>
+  <g transform="translate(235, 200) scale(1.12)" filter="url(#blockShadow)">
 
-    <!-- Piece 2 — Green (top-right, assembled) -->
-    <path d="
-      M 140,0 L 280,0
-      L 280,140
-      L 235,140 C 235,148 228,164 210,164 C 192,164 185,148 185,140
-      L 140,140
-      L 140,95 C 148,95 164,88 164,70 C 164,52 148,45 140,45
-      Z"
-      fill="url(#greenGrad)" stroke="white" stroke-width="2.5"
-      stroke-linejoin="round" filter="url(#pieceShadow)"/>
+    <!-- === BOTTOM LAYER (z=0) === -->
 
-    <!-- Piece 3 — Yellow (bottom-left, assembled) -->
-    <path d="
-      M 0,140
-      L 45,140 C 45,148 52,164 70,164 C 88,164 95,148 95,140
-      L 140,140
-      L 140,185 C 148,185 164,192 164,210 C 164,228 148,235 140,235
-      L 140,280 L 0,280 Z"
-      fill="url(#yellowGrad)" stroke="white" stroke-width="2.5"
-      stroke-linejoin="round" filter="url(#pieceShadow)"/>
+    <!-- Block (0,0,0) — Blue — back-left -->
+    <g>
+      <!-- top face -->
+      <polygon points="0,0 62,36 0,72 -62,36" fill="url(#blueTop)" stroke="white" stroke-width="1.5"/>
+      <!-- left face -->
+      <polygon points="-62,36 0,72 0,144 -62,108" fill="url(#blueLeft)" stroke="white" stroke-width="1.5"/>
+      <!-- right face -->
+      <polygon points="62,36 0,72 0,144 62,108" fill="url(#blueRight)" stroke="white" stroke-width="1.5"/>
+    </g>
 
-    <!-- Piece 4 — Red (bottom-right, floating / being placed) -->
-    <g transform="translate(16,-18) rotate(-4, 210, 210)">
-      <path d="
-        M 140,140
-        L 185,140 C 185,148 192,164 210,164 C 228,164 235,148 235,140
-        L 280,140
-        L 280,280 L 140,280
-        L 140,235 C 148,235 164,228 164,210 C 164,192 148,185 140,185
-        Z"
-        fill="url(#redGrad)" stroke="white" stroke-width="2.5"
-        stroke-linejoin="round" filter="url(#floatShadow)"/>
+    <!-- Block (1,0,0) — Green — front-left -->
+    <g transform="translate(62, 36)">
+      <!-- top face -->
+      <polygon points="0,0 62,36 0,72 -62,36" fill="url(#greenTop)" stroke="white" stroke-width="1.5"/>
+      <!-- left face -->
+      <polygon points="-62,36 0,72 0,144 -62,108" fill="url(#greenLeft)" stroke="white" stroke-width="1.5"/>
+      <!-- right face -->
+      <polygon points="62,36 0,72 0,144 62,108" fill="url(#greenRight)" stroke="white" stroke-width="1.5"/>
+    </g>
+
+    <!-- Block (0,1,0) — Yellow — back-right -->
+    <g transform="translate(-62, 36)">
+      <!-- top face -->
+      <polygon points="0,0 62,36 0,72 -62,36" fill="url(#yellowTop)" stroke="white" stroke-width="1.5"/>
+      <!-- left face -->
+      <polygon points="-62,36 0,72 0,144 -62,108" fill="url(#yellowLeft)" stroke="white" stroke-width="1.5"/>
+      <!-- right face -->
+      <polygon points="62,36 0,72 0,144 62,108" fill="url(#yellowRight)" stroke="white" stroke-width="1.5"/>
+    </g>
+
+    <!-- Block (1,1,0) — Red — front-right -->
+    <g transform="translate(0, 72)">
+      <!-- top face -->
+      <polygon points="0,0 62,36 0,72 -62,36" fill="url(#redTop)" stroke="white" stroke-width="1.5"/>
+      <!-- left face -->
+      <polygon points="-62,36 0,72 0,144 -62,108" fill="url(#redLeft)" stroke="white" stroke-width="1.5"/>
+      <!-- right face -->
+      <polygon points="62,36 0,72 0,144 62,108" fill="url(#redRight)" stroke="white" stroke-width="1.5"/>
+    </g>
+
+    <!-- === TOP LAYER (z=1) === -->
+
+    <!-- Block (0,0,1) — Green — back-left top -->
+    <g transform="translate(0, -72)">
+      <polygon points="0,0 62,36 0,72 -62,36" fill="url(#greenTop)" stroke="white" stroke-width="1.5"/>
+      <polygon points="-62,36 0,72 0,144 -62,108" fill="url(#greenLeft)" stroke="white" stroke-width="1.5"/>
+      <polygon points="62,36 0,72 0,144 62,108" fill="url(#greenRight)" stroke="white" stroke-width="1.5"/>
+    </g>
+
+    <!-- Block (1,0,1) — Yellow — front-left top -->
+    <g transform="translate(62, -36)">
+      <polygon points="0,0 62,36 0,72 -62,36" fill="url(#yellowTop)" stroke="white" stroke-width="1.5"/>
+      <polygon points="-62,36 0,72 0,144 -62,108" fill="url(#yellowLeft)" stroke="white" stroke-width="1.5"/>
+      <polygon points="62,36 0,72 0,144 62,108" fill="url(#yellowRight)" stroke="white" stroke-width="1.5"/>
+    </g>
+
+    <!-- Block (0,1,1) — Red — back-right top -->
+    <g transform="translate(-62, -36)">
+      <polygon points="0,0 62,36 0,72 -62,36" fill="url(#redTop)" stroke="white" stroke-width="1.5"/>
+      <polygon points="-62,36 0,72 0,144 -62,108" fill="url(#redLeft)" stroke="white" stroke-width="1.5"/>
+      <polygon points="62,36 0,72 0,144 62,108" fill="url(#redRight)" stroke="white" stroke-width="1.5"/>
+    </g>
+
+    <!-- Block (1,1,1) — Blue — front-right top — FLOATING -->
+    <g transform="translate(38, -52)" filter="url(#floatShadow)">
+      <g transform="rotate(-5, 0, 0)">
+        <polygon points="0,0 62,36 0,72 -62,36" fill="url(#blueTop)" stroke="white" stroke-width="1.5"/>
+        <polygon points="-62,36 0,72 0,144 -62,108" fill="url(#blueLeft)" stroke="white" stroke-width="1.5"/>
+        <polygon points="62,36 0,72 0,144 62,108" fill="url(#blueRight)" stroke="white" stroke-width="1.5"/>
+      </g>
     </g>
 
   </g>
