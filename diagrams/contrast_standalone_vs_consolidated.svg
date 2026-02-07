@@ -40,10 +40,10 @@
     </clipPath>
   </defs>
 
-  <rect width="520" height="510" fill="#ffffff"/>
+  <rect width="520" height="510" fill="none"/>
 
   <!-- ===== TOP: 単体決算 ===== -->
-  <rect x="8" y="6" width="504" height="188" rx="18" fill="#f8f9fa" stroke="#e8eaed" stroke-width="1"/>
+  <rect x="8" y="6" width="504" height="188" rx="18" fill="none" stroke="none"/>
   <rect x="26" y="16" width="120" height="28" rx="14" fill="#5f6368"/>
   <text class="t" x="86" y="30" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="800" fill="#fff">単体決算</text>
 
@@ -99,8 +99,8 @@
   <!-- Arrow 2 -->
   <line x1="292" y1="110" x2="358" y2="110" stroke="#5f6368" stroke-width="3" marker-end="url(#a)"/>
 
-  <!-- ── Stage 3: 個別FS (scale 0.95) ── -->
-  <g transform="translate(364, 50) scale(0.95)">
+  <!-- ── Stage 3: 個別FS (scale 0.78) ── -->
+  <g transform="translate(375, 60) scale(0.78)">
     <rect x="5" y="7" width="128" height="124" rx="8" fill="#e0e2e6" stroke="#dadce0" stroke-width="0.5"/>
     <rect x="3" y="4" width="128" height="124" rx="8" fill="#ecedef" stroke="#dadce0" stroke-width="0.5"/>
     <g filter="url(#s)">
@@ -119,8 +119,10 @@
     </g>
   </g>
 
+  <text class="t" x="427" y="180" text-anchor="middle" font-size="15" font-weight="900" fill="#3c4043">帳簿から作成</text>
+
   <!-- ===== BOTTOM: 連結決算 ===== -->
-  <rect x="8" y="204" width="504" height="270" rx="18" fill="#eef4ff" stroke="#d4e2f7" stroke-width="1.5"/>
+  <rect x="8" y="204" width="504" height="270" rx="18" fill="none" stroke="none"/>
   <rect x="26" y="216" width="120" height="28" rx="14" fill="#1a73e8"/>
   <text class="t" x="86" y="230" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="800" fill="#fff">連結決算</text>
 
@@ -179,6 +181,6 @@
     <text class="t" x="97" y="98" text-anchor="middle" dominant-baseline="middle"
           font-size="32" font-weight="900" fill="#fff">連結FS</text>
   </g>
-  <text class="t" x="404" y="458" text-anchor="middle" font-size="15" font-weight="900" fill="#3c4043">合算・調整して作成</text>
+  <text class="t" x="404" y="458" text-anchor="middle" font-size="15" font-weight="900" fill="#3c4043">合算・修正して作成</text>
 
 </svg>

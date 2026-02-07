@@ -1,63 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="420" viewBox="0 0 500 420" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="470" viewBox="0 0 560 470" preserveAspectRatio="xMidYMid meet">
   <defs>
     <style>.t{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic","Meiryo",sans-serif}</style>
     <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#202124" flood-opacity=".08"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#202124" flood-opacity="0.13"/>
     </filter>
-    <marker id="ab" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
-      <polygon points="0 0,12 5,0 10" fill="#1a73e8"/>
-    </marker>
-    <marker id="ar" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
-      <polygon points="0 0,12 5,0 10" fill="#ea4335"/>
-    </marker>
-    <marker id="ag" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
-      <polygon points="0 0,12 5,0 10" fill="#34a853"/>
-    </marker>
   </defs>
 
-  <rect width="500" height="420" fill="#fff"/>
+  <rect width="560" height="470" fill="none"/>
 
-  <!--
-    All arrows share one circle: cx=250 cy=210 r=155
-    Boxes sit at θ=0° (top), 120° (bottom-right), 240° (bottom-left)
-    Arrows fill the 86° arcs between boxes
-  -->
+  <!-- All three arcs share circle: center(280,240) R=185 -->
+  <g transform="translate(0,8)">
+  <!-- ====== ARROWS on shared circle ====== -->
 
-  <!-- Center badge -->
-  <circle cx="250" cy="210" r="46" fill="#f8f9fa" stroke="#dadce0" stroke-width="1.5"/>
-  <text class="t" x="250" y="195" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="900" fill="#5f6368">毎期</text>
-  <text class="t" x="250" y="213" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="900" fill="#5f6368">スクラップ</text>
-  <text class="t" x="250" y="231" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="900" fill="#5f6368">&amp;ビルド</text>
+  <!-- Blue: top → bottom-right  (20° → 105° clockwise) -->
+  <path d="M343,66 A185,185 0 0 1 459,288" fill="none" stroke="#1a73e8" stroke-width="5.5"/>
 
-  <!-- ====== ARROWS (arcs on the shared circle) ====== -->
+  <!-- Red: bottom-right → bottom-left  (140° → 220° clockwise) -->
+  <path d="M399,382 A185,185 0 0 1 161,382" fill="none" stroke="#ea4335" stroke-width="5.5"/>
 
-  <!-- Blue: top → bottom-right  (θ 34° → 108°) -->
-  <path d="M337,82 A155,155 0 0 1 397,258" fill="none" stroke="#1a73e8" stroke-width="3.5" marker-end="url(#ab)"/>
+  <!-- Green: bottom-left → top  (255° → 340° clockwise) -->
+  <path d="M101,288 A185,185 0 0 1 217,66" fill="none" stroke="#34a853" stroke-width="5.5"/>
 
-  <!-- Red: bottom-right → bottom-left  (θ 137° → 223°) -->
-  <path d="M356,323 A155,155 0 0 1 144,323" fill="none" stroke="#ea4335" stroke-width="3.5" marker-end="url(#ar)"/>
+  <!-- ====== ICONS + CAPTIONS ====== -->
 
-  <!-- Green: bottom-left → top  (θ 257° → 328°) -->
-  <path d="M99,245 A155,155 0 0 1 168,79" fill="none" stroke="#34a853" stroke-width="3.5" marker-end="url(#ag)"/>
-
-  <!-- ====== BOXES (drawn on top to cover junctions) ====== -->
-
-  <!-- 開始仕訳 — at θ=0° (250, 55) -->
-  <g filter="url(#s)">
-    <rect x="173" y="32" width="154" height="48" rx="14" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
-    <text class="t" x="250" y="58" text-anchor="middle" dominant-baseline="middle" font-size="19" font-weight="900" fill="#34a853">開始仕訳</text>
+  <!-- 開始仕訳 — top: two ledger books with carry-forward arrow -->
+  <g>
+    <rect x="178" y="22" width="204" height="108" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
+    <g transform="translate(280,56) scale(1.15)">
+      <!-- Previous period ledger (faded) -->
+      <g opacity="0.38">
+        <rect x="-62" y="-28" width="42" height="54" rx="3" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>
+        <rect x="-62" y="-28" width="10" height="54" rx="3 0 0 3" fill="#a5d6a7" stroke="#66bb6a" stroke-width="1"/>
+        <line x1="-46" y1="-14" x2="-26" y2="-14" stroke="#a5d6a7" stroke-width="2.5"/>
+        <line x1="-46" y1="-4" x2="-26" y2="-4" stroke="#a5d6a7" stroke-width="2.5"/>
+        <line x1="-46" y1="6" x2="-32" y2="6" stroke="#a5d6a7" stroke-width="2.5"/>
+        <line x1="-46" y1="16" x2="-28" y2="16" stroke="#a5d6a7" stroke-width="2.5"/>
+      </g>
+      <!-- Bold carry-forward arrow -->
+      <line x1="-14" y1="0" x2="14" y2="0" stroke="#34a853" stroke-width="5" stroke-linecap="round"/>
+      <polygon points="22,0 12,-9 12,9" fill="#34a853"/>
+      <!-- Current period ledger (bright) -->
+      <rect x="26" y="-28" width="42" height="54" rx="3" fill="#fff" stroke="#34a853" stroke-width="2.5"/>
+      <rect x="26" y="-28" width="10" height="54" rx="3 0 0 3" fill="#34a853" stroke="#2e7d32" stroke-width="1"/>
+      <line x1="42" y1="-14" x2="62" y2="-14" stroke="#c8e6c9" stroke-width="2.5"/>
+      <line x1="42" y1="-4" x2="62" y2="-4" stroke="#c8e6c9" stroke-width="2.5"/>
+      <line x1="42" y1="6" x2="56" y2="6" stroke="#c8e6c9" stroke-width="2.5"/>
+      <line x1="42" y1="16" x2="60" y2="16" stroke="#c8e6c9" stroke-width="2.5"/>
+    </g>
+    <text class="t" x="280" y="110" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="700" fill="#34a853">開始仕訳</text>
   </g>
 
-  <!-- 当期の修正 — at θ=120° (384, 288) -->
-  <g filter="url(#s)">
-    <rect x="307" y="265" width="154" height="48" rx="14" fill="#eef4ff" stroke="#1a73e8" stroke-width="2"/>
-    <text class="t" x="384" y="291" text-anchor="middle" dominant-baseline="middle" font-size="19" font-weight="900" fill="#1a73e8">当期の修正</text>
+  <!-- 当期の修正 — bottom-right: document with large pencil editing -->
+  <g>
+    <rect x="365" y="280" width="150" height="105" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
+    <g transform="translate(440,310) scale(1.12)">
+      <!-- Document with folded corner -->
+      <rect x="-28" y="-30" width="48" height="60" rx="4" fill="#fff" stroke="#1a73e8" stroke-width="2.5"/>
+      <path d="M8,-30 L20,-30 L20,-18 Z" fill="#e3f2fd" stroke="#1a73e8" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M8,-30 L8,-18 L20,-18" fill="none" stroke="#1a73e8" stroke-width="1.2" stroke-linejoin="round"/>
+      <!-- Text lines -->
+      <line x1="-18" y1="-16" x2="6" y2="-16" stroke="#90caf9" stroke-width="2.5"/>
+      <line x1="-18" y1="-6" x2="6" y2="-6" stroke="#90caf9" stroke-width="2.5"/>
+      <line x1="-18" y1="4" x2="-2" y2="4" stroke="#90caf9" stroke-width="2.5"/>
+      <line x1="-18" y1="14" x2="6" y2="14" stroke="#90caf9" stroke-width="2.5"/>
+      <!-- Pencil -->
+      <g transform="translate(16,4) rotate(30)">
+        <rect x="-6" y="-30" width="12" height="54" rx="2" fill="#1a73e8" stroke="#1558b0" stroke-width="0.8"/>
+        <rect x="-6" y="-30" width="12" height="10" rx="2" fill="#fbbc04"/>
+        <polygon points="-6,24 6,24 0,34" fill="#ffcc80"/>
+        <polygon points="-1.5,33 1.5,33 0,36" fill="#3c4043"/>
+      </g>
+    </g>
+    <text class="t" x="440" y="376" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="700" fill="#1a73e8">当期の修正</text>
   </g>
 
-  <!-- 解散（リセット） — at θ=240° (116, 288) -->
-  <g filter="url(#s)">
-    <rect x="33" y="265" width="166" height="48" rx="14" fill="#fce8e6" stroke="#ea4335" stroke-width="2"/>
-    <text class="t" x="116" y="291" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="900" fill="#ea4335">解散（リセット）</text>
+  <!-- 解散（リセット） — bottom-left: document with prohibition sign -->
+  <g>
+    <rect x="30" y="280" width="180" height="105" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
+    <g transform="translate(120,310) scale(1.12)">
+      <!-- Document (faded, being discarded) -->
+      <g opacity="0.5">
+        <rect x="-24" y="-30" width="48" height="60" rx="4" fill="#fff" stroke="#d32f2f" stroke-width="2.2"/>
+        <line x1="-14" y1="-16" x2="14" y2="-16" stroke="#ef9a9a" stroke-width="2.5"/>
+        <line x1="-14" y1="-6" x2="14" y2="-6" stroke="#ef9a9a" stroke-width="2.5"/>
+        <line x1="-14" y1="4" x2="6" y2="4" stroke="#ef9a9a" stroke-width="2.5"/>
+        <line x1="-14" y1="14" x2="14" y2="14" stroke="#ef9a9a" stroke-width="2.5"/>
+      </g>
+      <!-- Prohibition circle with slash -->
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#ea4335" stroke-width="4"/>
+      <line x1="-20" y1="20" x2="20" y2="-20" stroke="#ea4335" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <text class="t" x="124" y="376" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="700" fill="#ea4335">解散（リセット）</text>
+  </g>
+
+  <!-- ====== CENTER BADGE ====== -->
+  <rect x="145" y="220" width="270" height="40" rx="20" fill="#1a73e8" filter="url(#s)"/>
+  <text class="t" x="280" y="240" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="900" fill="#fff">毎期スクラップ&amp;ビルド</text>
+
+  <!-- ====== DIRECTION TRIANGLES at visible-arc midpoints (on top of everything) ====== -->
+  <!-- Visible blue: midpoint shifted to 70° → (454,177) -->
+  <polygon points="-18,-13 -18,13 18,0" transform="translate(454,177) rotate(70)" fill="#1a73e8"/>
+  <!-- Visible red: midpoint shifted to 182° → (274,425) -->
+  <polygon points="-18,-13 -18,13 18,0" transform="translate(274,425) rotate(182)" fill="#ea4335"/>
+  <!-- Visible green: midpoint shifted to 294° → (111,165) -->
+  <polygon points="-18,-13 -18,13 18,0" transform="translate(111,165) rotate(294)" fill="#34a853"/>
   </g>
 
 </svg>
