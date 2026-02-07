@@ -51,53 +51,53 @@
   <text class="t" x="250" y="82" text-anchor="middle" font-size="15" font-weight="800" fill="#ea4335">内部取引</text>
 
   <!-- Arrow 1: 売上 ↔ 仕入 -->
-  <polygon points="192,100 204,94 204,106" fill="#9aa0a6"/>
-  <line x1="204" y1="100" x2="296" y2="100" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
-  <polygon points="308,100 296,94 296,106" fill="#9aa0a6"/>
+  <polygon points="192,100 204,94 204,106" fill="#5f6368"/>
+  <line x1="204" y1="100" x2="296" y2="100" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="308,100 296,94 296,106" fill="#5f6368"/>
   <circle cx="250" cy="100" r="12" fill="#fff"/>
   <line x1="242" y1="92" x2="258" y2="108" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
   <line x1="258" y1="92" x2="242" y2="108" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- Arrow 2: 貸付 ↔ 借入 -->
-  <polygon points="192,132 204,126 204,138" fill="#9aa0a6"/>
-  <line x1="204" y1="132" x2="296" y2="132" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
-  <polygon points="308,132 296,126 296,138" fill="#9aa0a6"/>
+  <polygon points="192,132 204,126 204,138" fill="#5f6368"/>
+  <line x1="204" y1="132" x2="296" y2="132" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="308,132 296,126 296,138" fill="#5f6368"/>
   <circle cx="250" cy="132" r="12" fill="#fff"/>
   <line x1="242" y1="124" x2="258" y2="140" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
   <line x1="258" y1="124" x2="242" y2="140" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- Arrow 3: 配当 ↔ 配当支払 -->
-  <polygon points="192,164 204,158 204,170" fill="#9aa0a6"/>
-  <line x1="204" y1="164" x2="296" y2="164" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
-  <polygon points="308,164 296,158 296,170" fill="#9aa0a6"/>
+  <polygon points="192,164 204,158 204,170" fill="#5f6368"/>
+  <line x1="204" y1="164" x2="296" y2="164" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="308,164 296,158 296,170" fill="#5f6368"/>
   <circle cx="250" cy="164" r="12" fill="#fff"/>
   <line x1="242" y1="156" x2="258" y2="172" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
   <line x1="258" y1="156" x2="242" y2="172" stroke="#ea4335" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- ===== External transactions ===== -->
-  <text class="t" x="250" y="232" text-anchor="middle" font-size="12" font-weight="800" fill="#5f6368">外部取引</text>
+  <text class="t" x="250" y="232" text-anchor="middle" font-size="14" font-weight="800" fill="#3c4043">外部取引</text>
 
   <!-- Horizontal connector -->
-  <line x1="114" y1="244" x2="386" y2="244" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
+  <line x1="114" y1="244" x2="386" y2="244" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/>
 
   <!-- Left downward arrow (parent → third party) -->
-  <line x1="114" y1="244" x2="114" y2="304" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
-  <polygon points="114,312 108,304 120,304" fill="#9aa0a6"/>
+  <line x1="114" y1="244" x2="114" y2="304" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="114,312 108,304 120,304" fill="#5f6368"/>
   <!-- ✓ mark -->
   <circle cx="114" cy="278" r="10" fill="#fff"/>
-  <path d="M108,278 L112,282 L120,274" stroke="#0d904f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M108,278 L112,282 L120,274" stroke="#34a853" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- Right downward arrow (child → third party) -->
-  <line x1="386" y1="244" x2="386" y2="304" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/>
-  <polygon points="386,312 380,304 392,304" fill="#9aa0a6"/>
+  <line x1="386" y1="244" x2="386" y2="304" stroke="#5f6368" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="386,312 380,304 392,304" fill="#5f6368"/>
   <!-- ✓ mark -->
   <circle cx="386" cy="278" r="10" fill="#fff"/>
-  <path d="M380,278 L384,282 L392,274" stroke="#0d904f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M380,278 L384,282 L392,274" stroke="#34a853" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- ===== Third party (wider) ===== -->
-  <g transform="translate(56, 318)" filter="url(#s)">
-    <rect width="388" height="48" rx="14" fill="#fff" stroke="#9aa0a6" stroke-width="1.4"/>
-    <text class="t" x="194" y="19" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="900" fill="#3c4043">第三者</text>
-    <text class="t" x="194" y="38" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#9aa0a6">（グループ外）</text>
+  <!-- ===== Third party ===== -->
+  <g transform="translate(78, 318)" filter="url(#s)">
+    <rect width="344" height="48" rx="14" fill="#fff" stroke="#5f6368" stroke-width="1.4"/>
+    <text class="t" x="172" y="19" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="900" fill="#3c4043">第三者</text>
+    <text class="t" x="172" y="38" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#5f6368">（グループ外）</text>
   </g>
 </svg>

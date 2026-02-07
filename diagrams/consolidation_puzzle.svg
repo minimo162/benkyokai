@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="250" viewBox="0 0 500 250">
+  <defs>
+    <style>
+      .t { font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif; }
+    </style>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#202124" flood-opacity="0.08"/>
+    </filter>
+    <clipPath id="bc">
+      <rect width="140" height="140" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <rect width="500" height="250" fill="#ffffff"/>
+
+  <!-- Background panel -->
+  <rect x="8" y="6" width="484" height="238" rx="18" fill="#f8f9fa" stroke="#e8eaed" stroke-width="1"/>
+
+  <!-- Message badge (centered) -->
+  <g filter="url(#s)">
+    <rect x="115" y="12" width="270" height="28" rx="14" fill="#ea4335"/>
+    <text class="t" x="250" y="26" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="800" fill="#fff">1つでも欠けると完成しない</text>
+  </g>
+
+  <!-- Puzzle board (scaled up from 0.8 to 1.15) -->
+  <g transform="translate(60, 48) scale(1.15)">
+    <g clip-path="url(#bc)" filter="url(#s)">
+      <!-- 4 quadrants -->
+      <rect x="0" y="0" width="70" height="70" fill="#66bb6a"/>
+      <rect x="70" y="0" width="70" height="70" fill="#34a853"/>
+      <rect x="0" y="70" width="70" height="70" fill="#1a73e8"/>
+      <rect x="70" y="70" width="70" height="70" fill="#f0f0f0"/>
+
+      <!-- Tab color corrections -->
+      <path d="M27,70 C27,68 25,64 23,62 C21,60 21,58 21,57 C21,54 27,53 35,53 C43,53 49,54 49,57 C49,58 49,60 47,62 C45,64 43,68 43,70 Z" fill="#1a73e8"/>
+      <path d="M97,70 C97,72 95,76 93,78 C91,80 91,82 91,83 C91,86 97,87 105,87 C113,87 119,86 119,83 C119,82 119,80 117,78 C115,76 113,72 113,70 Z" fill="#34a853"/>
+      <path d="M70,27 C68,27 64,25 62,23 C60,21 58,21 57,21 C54,21 53,27 53,35 C53,43 54,49 57,49 C58,49 60,49 62,47 C64,45 68,43 70,43 Z" fill="#34a853"/>
+      <path d="M70,97 C72,97 76,95 78,93 C80,91 82,91 83,91 C86,91 87,97 87,105 C87,113 86,119 83,119 C82,119 80,119 78,117 C76,115 72,113 70,113 Z" fill="#1a73e8"/>
+
+      <!-- Puzzle seams -->
+      <path d="M0,70 H27 C27,68 25,64 23,62 C21,60 21,58 21,57 C21,54 27,53 35,53 C43,53 49,54 49,57 C49,58 49,60 47,62 C45,64 43,68 43,70 H97 C97,72 95,76 93,78 C91,80 91,82 91,83 C91,86 97,87 105,87 C113,87 119,86 119,83 C119,82 119,80 117,78 C115,76 113,72 113,70 H140"
+            fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+      <path d="M70,0 V27 C68,27 64,25 62,23 C60,21 58,21 57,21 C54,21 53,27 53,35 C53,43 54,49 57,49 C58,49 60,49 62,47 C64,45 68,43 70,43 V97 C72,97 76,95 78,93 C80,91 82,91 83,91 C86,91 87,97 87,105 C87,113 86,119 83,119 C82,119 80,119 78,117 C76,115 72,113 70,113 V140"
+            fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+    </g>
+
+    <!-- Board border -->
+    <rect width="140" height="140" rx="10" fill="none" stroke="#0d47a1" stroke-width="2.2"/>
+
+    <!-- Red dashed border on missing quadrant -->
+    <path d="M70,70 H97 C97,72 95,76 93,78 C91,80 91,82 91,83 C91,86 97,87 105,87 C113,87 119,86 119,83 C119,82 119,80 117,78 C115,76 113,72 113,70 H140 V130 C140,135.5 135.5,140 130,140 H70 V113 C72,113 76,115 78,117 C80,119 82,119 83,119 C86,119 87,113 87,105 C87,97 86,91 83,91 C82,91 80,91 78,93 C76,95 72,97 70,97 V70 Z"
+          fill="none" stroke="#ea4335" stroke-width="2" stroke-dasharray="5 3"/>
+
+    <!-- Company labels -->
+    <text class="t" x="35" y="38" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="900" fill="#fff">A社</text>
+    <text class="t" x="105" y="38" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="900" fill="#fff">B社</text>
+    <text class="t" x="35" y="108" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="900" fill="#fff">親会社</text>
+    <text class="t" x="105" y="105" text-anchor="middle" dominant-baseline="middle" font-size="20" font-weight="900" fill="#ea4335">?</text>
+
+    <!-- Checkmarks -->
+    <circle cx="52" cy="55" r="9" fill="rgba(255,255,255,0.85)"/>
+    <text class="t" x="52" y="56" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="900" fill="#2e7d32">&#x2713;</text>
+    <circle cx="122" cy="55" r="9" fill="rgba(255,255,255,0.85)"/>
+    <text class="t" x="122" y="56" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="900" fill="#2e7d32">&#x2713;</text>
+    <circle cx="52" cy="125" r="9" fill="rgba(255,255,255,0.85)"/>
+    <text class="t" x="52" y="126" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="900" fill="#0d47a1">&#x2713;</text>
+
+    <!-- Label below puzzle -->
+    <text class="t" x="70" y="160" text-anchor="middle" font-size="13" font-weight="900" fill="#3c4043">連結FS</text>
+  </g>
+
+  <!-- Floating missing piece (C社) -->
+  <g transform="translate(315, 55) rotate(14, 35, 35)" filter="url(#s)">
+    <path d="M0,0 H27 C27,2 25,6 23,8 C21,10 21,12 21,13 C21,16 27,17 35,17 C43,17 49,16 49,13 C49,12 49,10 47,8 C45,6 43,2 43,0 H70 V60 C70,65.5 65.5,70 60,70 H0 V43 C2,43 6,45 8,47 C10,49 12,49 13,49 C16,49 17,43 17,35 C17,27 16,21 13,21 C12,21 10,21 8,23 C6,25 2,27 0,27 V0 Z"
+          fill="#fbbc04" stroke="#ea4335" stroke-width="2.5"/>
+    <text class="t" x="42" y="36" text-anchor="middle" font-size="16" font-weight="900" fill="#fff">C社</text>
+    <circle cx="42" cy="54" r="11" fill="#ea4335"/>
+    <text class="t" x="42" y="55" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="900" fill="#fff">!</text>
+  </g>
+
+  <!-- Curved dashed arrow from C社 to gap -->
+  <path d="M308,108 C280,122 258,142 232,160" fill="none" stroke="#ea4335" stroke-width="3" stroke-dasharray="5 3"/>
+  <polygon points="224,166 242,164 236,150" fill="#ea4335"/>
+
+  <!-- Annotation near C社 -->
+  <text class="t" x="370" y="150" text-anchor="middle" font-size="12" font-weight="700" fill="#ea4335">データ未着</text>
+
+</svg>
