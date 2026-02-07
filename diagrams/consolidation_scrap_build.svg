@@ -31,10 +31,9 @@
       <g opacity="0.38">
         <rect x="-62" y="-28" width="42" height="54" rx="3" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>
         <rect x="-62" y="-28" width="10" height="54" rx="3 0 0 3" fill="#a5d6a7" stroke="#66bb6a" stroke-width="1"/>
-        <line x1="-46" y1="-14" x2="-26" y2="-14" stroke="#a5d6a7" stroke-width="2.5"/>
-        <line x1="-46" y1="-4" x2="-26" y2="-4" stroke="#a5d6a7" stroke-width="2.5"/>
-        <line x1="-46" y1="6" x2="-32" y2="6" stroke="#a5d6a7" stroke-width="2.5"/>
-        <line x1="-46" y1="16" x2="-28" y2="16" stroke="#a5d6a7" stroke-width="2.5"/>
+        <line x1="-46" y1="-12" x2="-26" y2="-12" stroke="#a5d6a7" stroke-width="3"/>
+        <line x1="-46" y1="0" x2="-26" y2="0" stroke="#a5d6a7" stroke-width="3"/>
+        <line x1="-46" y1="12" x2="-30" y2="12" stroke="#a5d6a7" stroke-width="3"/>
       </g>
       <!-- Bold carry-forward arrow -->
       <line x1="-14" y1="0" x2="14" y2="0" stroke="#34a853" stroke-width="5" stroke-linecap="round"/>
@@ -42,27 +41,25 @@
       <!-- Current period ledger (bright) -->
       <rect x="26" y="-28" width="42" height="54" rx="3" fill="#fff" stroke="#34a853" stroke-width="2.5"/>
       <rect x="26" y="-28" width="10" height="54" rx="3 0 0 3" fill="#34a853" stroke="#2e7d32" stroke-width="1"/>
-      <line x1="42" y1="-14" x2="62" y2="-14" stroke="#c8e6c9" stroke-width="2.5"/>
-      <line x1="42" y1="-4" x2="62" y2="-4" stroke="#c8e6c9" stroke-width="2.5"/>
-      <line x1="42" y1="6" x2="56" y2="6" stroke="#c8e6c9" stroke-width="2.5"/>
-      <line x1="42" y1="16" x2="60" y2="16" stroke="#c8e6c9" stroke-width="2.5"/>
+      <line x1="42" y1="-12" x2="62" y2="-12" stroke="#c8e6c9" stroke-width="3"/>
+      <line x1="42" y1="0" x2="62" y2="0" stroke="#c8e6c9" stroke-width="3"/>
+      <line x1="42" y1="12" x2="58" y2="12" stroke="#c8e6c9" stroke-width="3"/>
     </g>
-    <text class="t" x="280" y="110" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="700" fill="#34a853">開始仕訳</text>
+    <text class="t" x="285" y="110" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="700" fill="#34a853">開始仕訳（引き継ぎ）</text>
   </g>
 
   <!-- 当期の修正 — bottom-right: document with large pencil editing -->
   <g>
-    <rect x="365" y="280" width="150" height="105" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
+    <rect x="355" y="280" width="170" height="105" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
     <g transform="translate(440,310) scale(1.12)">
       <!-- Document with folded corner -->
       <rect x="-28" y="-30" width="48" height="60" rx="4" fill="#fff" stroke="#1a73e8" stroke-width="2.5"/>
       <path d="M8,-30 L20,-30 L20,-18 Z" fill="#e3f2fd" stroke="#1a73e8" stroke-width="1.2" stroke-linejoin="round"/>
       <path d="M8,-30 L8,-18 L20,-18" fill="none" stroke="#1a73e8" stroke-width="1.2" stroke-linejoin="round"/>
       <!-- Text lines -->
-      <line x1="-18" y1="-16" x2="6" y2="-16" stroke="#90caf9" stroke-width="2.5"/>
-      <line x1="-18" y1="-6" x2="6" y2="-6" stroke="#90caf9" stroke-width="2.5"/>
-      <line x1="-18" y1="4" x2="-2" y2="4" stroke="#90caf9" stroke-width="2.5"/>
-      <line x1="-18" y1="14" x2="6" y2="14" stroke="#90caf9" stroke-width="2.5"/>
+      <line x1="-18" y1="-14" x2="6" y2="-14" stroke="#90caf9" stroke-width="3"/>
+      <line x1="-18" y1="-2" x2="6" y2="-2" stroke="#90caf9" stroke-width="3"/>
+      <line x1="-18" y1="10" x2="0" y2="10" stroke="#90caf9" stroke-width="3"/>
       <!-- Pencil -->
       <g transform="translate(16,4) rotate(30)">
         <rect x="-6" y="-30" width="12" height="54" rx="2" fill="#1a73e8" stroke="#1558b0" stroke-width="0.8"/>
@@ -76,21 +73,20 @@
 
   <!-- 解散（リセット） — bottom-left: document with prohibition sign -->
   <g>
-    <rect x="30" y="280" width="180" height="105" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
+    <rect x="35" y="280" width="170" height="105" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
     <g transform="translate(120,310) scale(1.12)">
       <!-- Document (faded, being discarded) -->
       <g opacity="0.5">
         <rect x="-24" y="-30" width="48" height="60" rx="4" fill="#fff" stroke="#d32f2f" stroke-width="2.2"/>
-        <line x1="-14" y1="-16" x2="14" y2="-16" stroke="#ef9a9a" stroke-width="2.5"/>
-        <line x1="-14" y1="-6" x2="14" y2="-6" stroke="#ef9a9a" stroke-width="2.5"/>
-        <line x1="-14" y1="4" x2="6" y2="4" stroke="#ef9a9a" stroke-width="2.5"/>
-        <line x1="-14" y1="14" x2="14" y2="14" stroke="#ef9a9a" stroke-width="2.5"/>
+        <line x1="-14" y1="-14" x2="14" y2="-14" stroke="#ef9a9a" stroke-width="3"/>
+        <line x1="-14" y1="-2" x2="14" y2="-2" stroke="#ef9a9a" stroke-width="3"/>
+        <line x1="-14" y1="10" x2="8" y2="10" stroke="#ef9a9a" stroke-width="3"/>
       </g>
       <!-- Prohibition circle with slash -->
       <circle cx="0" cy="0" r="28" fill="none" stroke="#ea4335" stroke-width="4"/>
       <line x1="-20" y1="20" x2="20" y2="-20" stroke="#ea4335" stroke-width="4" stroke-linecap="round"/>
     </g>
-    <text class="t" x="124" y="376" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="700" fill="#ea4335">解散（リセット）</text>
+    <text class="t" x="125" y="376" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="700" fill="#ea4335">解散（リセット）</text>
   </g>
 
   <!-- ====== CENTER BADGE ====== -->
@@ -99,11 +95,11 @@
 
   <!-- ====== DIRECTION TRIANGLES at visible-arc midpoints (on top of everything) ====== -->
   <!-- Visible blue: midpoint shifted to 70° → (454,177) -->
-  <polygon points="-18,-13 -18,13 18,0" transform="translate(454,177) rotate(70)" fill="#1a73e8"/>
+  <polygon points="-22,-16 -22,16 22,0" transform="translate(454,177) rotate(70)" fill="#1a73e8"/>
   <!-- Visible red: midpoint shifted to 182° → (274,425) -->
-  <polygon points="-18,-13 -18,13 18,0" transform="translate(274,425) rotate(182)" fill="#ea4335"/>
+  <polygon points="-22,-16 -22,16 22,0" transform="translate(274,425) rotate(182)" fill="#ea4335"/>
   <!-- Visible green: midpoint shifted to 294° → (111,165) -->
-  <polygon points="-18,-13 -18,13 18,0" transform="translate(111,165) rotate(294)" fill="#34a853"/>
+  <polygon points="-22,-16 -22,16 22,0" transform="translate(111,165) rotate(294)" fill="#34a853"/>
   </g>
 
 </svg>

@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="520" height="480" viewBox="0 0 520 480">
+  <title>単体会計と連結会計の違い</title>
   <defs>
     <style>
       .t { font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif; }
@@ -8,9 +9,6 @@
     </filter>
     <marker id="a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#5f6368"/>
-    </marker>
-    <marker id="ab" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
-      <polygon points="0 0, 12 5, 0 10" fill="#1a73e8"/>
     </marker>
     <marker id="ag" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
       <polygon points="0 0, 12 5, 0 10" fill="#34a853"/>
@@ -22,28 +20,40 @@
       <polygon points="0 0, 12 5, 0 10" fill="#1565c0"/>
     </marker>
 
-    <!-- Piece A: tab top/right, slot bottom/left -->
-    <path id="pieceA" d="M0,0 H25 C25,-2 23,-5 21,-7 C19,-9 19,-11 19,-12 C19,-15 25,-16 32.5,-16 C40,-16 46,-15 46,-12 C46,-11 46,-9 44,-7 C42,-5 40,-2 40,0 H65 V25 C67,25 70,23 72,21 C74,19 76,19 77,19 C80,19 81,25 81,32.5 C81,40 80,46 77,46 C76,46 74,46 72,44 C70,42 67,40 65,40 V65 H40 C40,63 42,60 44,58 C46,56 46,54 46,53 C46,50 40,49 32.5,49 C25,49 19,50 19,53 C19,54 19,56 21,58 C23,60 25,63 25,65 H0 V40 C2,40 5,42 7,44 C9,46 11,46 12,46 C15,46 16,40 16,32.5 C16,25 15,19 12,19 C11,19 9,19 7,21 C5,23 2,25 0,25 V0 Z"/>
+    <!-- ===== 9 puzzle pieces matching board cells (row,col) ===== -->
+    <!-- Edge segments: flat / slot(concave 16u) / tab(convex 16u) -->
+    <!-- All curves use identical Bézier params as the board seams -->
 
-    <!-- Piece B: slot top, tab right, tab bottom, slot left -->
-    <path id="pieceB" d="M0,0 H25 C25,2 23,5 21,7 C19,9 19,11 19,12 C19,15 25,16 32.5,16 C40,16 46,15 46,12 C46,11 46,9 44,7 C42,5 40,2 40,0 H65 V25 C67,25 70,23 72,21 C74,19 76,19 77,19 C80,19 81,25 81,32.5 C81,40 80,46 77,46 C76,46 74,46 72,44 C70,42 67,40 65,40 V65 H40 C40,67 42,70 44,72 C46,74 46,76 46,77 C46,80 40,81 32.5,81 C25,81 19,80 19,77 C19,76 19,74 21,72 C23,70 25,67 25,65 H0 V40 C2,40 5,42 7,44 C9,46 11,46 12,46 C15,46 16,40 16,32.5 C16,25 15,19 12,19 C11,19 9,19 7,21 C5,23 2,25 0,25 V0 Z"/>
+    <!-- p00 top-left: flat T, slot R, slot B, flat L -->
+    <path id="p00" d="M10,0 H65 V25 C63,25 60,23 58,21 C56,19 54,19 53,19 C50,19 49,25 49,32.5 C49,40 50,46 53,46 C54,46 56,46 58,44 C60,42 63,40 65,40 V65 H40 C40,63 42,60 44,58 C46,56 46,54 46,53 C46,50 40,49 32.5,49 C25,49 19,50 19,53 C19,54 19,56 21,58 C23,60 25,63 25,65 H0 V10 Q0,0 10,0 Z"/>
+    <!-- p10 top-center: flat T, tab R, tab B, tab L -->
+    <path id="p10" d="M0,0 H65 V25 C67,25 70,23 72,21 C74,19 76,19 77,19 C80,19 81,25 81,32.5 C81,40 80,46 77,46 C76,46 74,46 72,44 C70,42 67,40 65,40 V65 H40 C40,67 42,70 44,72 C46,74 46,76 46,77 C46,80 40,81 32.5,81 C25,81 19,80 19,77 C19,76 19,74 21,72 C23,70 25,67 25,65 H0 V40 C-2,40 -5,42 -7,44 C-9,46 -11,46 -12,46 C-15,46 -16,40 -16,32.5 C-16,25 -15,19 -12,19 C-11,19 -9,19 -7,21 C-5,23 -2,25 0,25 V0 Z"/>
+    <!-- p20 top-right: flat T, flat R, slot B, slot L -->
+    <path id="p20" d="M0,0 H55 Q65,0 65,10 V65 H40 C40,63 42,60 44,58 C46,56 46,54 46,53 C46,50 40,49 32.5,49 C25,49 19,50 19,53 C19,54 19,56 21,58 C23,60 25,63 25,65 H0 V40 C2,40 5,42 7,44 C9,46 11,46 12,46 C15,46 16,40 16,32.5 C16,25 15,19 12,19 C11,19 9,19 7,21 C5,23 2,25 0,25 V0 Z"/>
 
-    <!-- Piece C: tab top, slot right, slot bottom, tab left -->
-    <path id="pieceC" d="M0,0 H25 C25,-2 23,-5 21,-7 C19,-9 19,-11 19,-12 C19,-15 25,-16 32.5,-16 C40,-16 46,-15 46,-12 C46,-11 46,-9 44,-7 C42,-5 40,-2 40,0 H65 V25 C63,25 60,23 58,21 C56,19 54,19 53,19 C50,19 49,25 49,32.5 C49,40 50,46 53,46 C54,46 56,46 58,44 C60,42 63,40 65,40 V65 H40 C40,63 42,60 44,58 C46,56 46,54 46,53 C46,50 40,49 32.5,49 C25,49 19,50 19,53 C19,54 19,56 21,58 C23,60 25,63 25,65 H0 V40 C-2,40 -5,42 -7,44 C-9,46 -11,46 -12,46 C-15,46 -16,40 -16,32.5 C-16,25 -15,19 -12,19 C-11,19 -9,19 -7,21 C-5,23 -2,25 0,25 V0 Z"/>
+    <!-- p01 mid-left: tab T, tab R, tab B, flat L -->
+    <path id="p01" d="M0,0 H25 C25,-2 23,-5 21,-7 C19,-9 19,-11 19,-12 C19,-15 25,-16 32.5,-16 C40,-16 46,-15 46,-12 C46,-11 46,-9 44,-7 C42,-5 40,-2 40,0 H65 V25 C67,25 70,23 72,21 C74,19 76,19 77,19 C80,19 81,25 81,32.5 C81,40 80,46 77,46 C76,46 74,46 72,44 C70,42 67,40 65,40 V65 H40 C40,67 42,70 44,72 C46,74 46,76 46,77 C46,80 40,81 32.5,81 C25,81 19,80 19,77 C19,76 19,74 21,72 C23,70 25,67 25,65 H0 Z"/>
+    <!-- p11 mid-center: slot T, slot R, slot B, slot L -->
+    <path id="p11" d="M0,0 H25 C25,2 23,5 21,7 C19,9 19,11 19,12 C19,15 25,16 32.5,16 C40,16 46,15 46,12 C46,11 46,9 44,7 C42,5 40,2 40,0 H65 V25 C63,25 60,23 58,21 C56,19 54,19 53,19 C50,19 49,25 49,32.5 C49,40 50,46 53,46 C54,46 56,46 58,44 C60,42 63,40 65,40 V65 H40 C40,63 42,60 44,58 C46,56 46,54 46,53 C46,50 40,49 32.5,49 C25,49 19,50 19,53 C19,54 19,56 21,58 C23,60 25,63 25,65 H0 V40 C2,40 5,42 7,44 C9,46 11,46 12,46 C15,46 16,40 16,32.5 C16,25 15,19 12,19 C11,19 9,19 7,21 C5,23 2,25 0,25 V0 Z"/>
+    <!-- p21 mid-right: tab T, flat R, tab B, tab L -->
+    <path id="p21" d="M0,0 H25 C25,-2 23,-5 21,-7 C19,-9 19,-11 19,-12 C19,-15 25,-16 32.5,-16 C40,-16 46,-15 46,-12 C46,-11 46,-9 44,-7 C42,-5 40,-2 40,0 H65 V65 H40 C40,67 42,70 44,72 C46,74 46,76 46,77 C46,80 40,81 32.5,81 C25,81 19,80 19,77 C19,76 19,74 21,72 C23,70 25,67 25,65 H0 V40 C-2,40 -5,42 -7,44 C-9,46 -11,46 -12,46 C-15,46 -16,40 -16,32.5 C-16,25 -15,19 -12,19 C-11,19 -9,19 -7,21 C-5,23 -2,25 0,25 V0 Z"/>
 
-    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a73e8"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+    <!-- p02 bot-left: slot T, slot R, flat B, flat L -->
+    <path id="p02" d="M0,0 H25 C25,2 23,5 21,7 C19,9 19,11 19,12 C19,15 25,16 32.5,16 C40,16 46,15 46,12 C46,11 46,9 44,7 C42,5 40,2 40,0 H65 V25 C63,25 60,23 58,21 C56,19 54,19 53,19 C50,19 49,25 49,32.5 C49,40 50,46 53,46 C54,46 56,46 58,44 C60,42 63,40 65,40 V65 H10 Q0,65 0,55 Z"/>
+    <!-- p12 bot-center: tab T, tab R, flat B, tab L -->
+    <path id="p12" d="M0,0 H25 C25,-2 23,-5 21,-7 C19,-9 19,-11 19,-12 C19,-15 25,-16 32.5,-16 C40,-16 46,-15 46,-12 C46,-11 46,-9 44,-7 C42,-5 40,-2 40,0 H65 V25 C67,25 70,23 72,21 C74,19 76,19 77,19 C80,19 81,25 81,32.5 C81,40 80,46 77,46 C76,46 74,46 72,44 C70,42 67,40 65,40 V65 H0 V40 C-2,40 -5,42 -7,44 C-9,46 -11,46 -12,46 C-15,46 -16,40 -16,32.5 C-16,25 -15,19 -12,19 C-11,19 -9,19 -7,21 C-5,23 -2,25 0,25 V0 Z"/>
+    <!-- p22 bot-right: slot T, flat R, flat B, slot L -->
+    <path id="p22" d="M0,0 H25 C25,2 23,5 21,7 C19,9 19,11 19,12 C19,15 25,16 32.5,16 C40,16 46,15 46,12 C46,11 46,9 44,7 C42,5 40,2 40,0 H65 V55 Q65,65 55,65 H0 V40 C2,40 5,42 7,44 C9,46 11,46 12,46 C15,46 16,40 16,32.5 C16,25 15,19 12,19 C11,19 9,19 7,21 C5,23 2,25 0,25 V0 Z"/>
+
     <clipPath id="boardClip">
       <rect width="195" height="195" rx="10"/>
     </clipPath>
   </defs>
 
-  <rect width="520" height="510" fill="none"/>
+  <rect width="520" height="480" fill="#fff"/>
 
   <!-- ===== TOP: 単体決算 ===== -->
-  <rect x="8" y="6" width="504" height="188" rx="18" fill="none" stroke="none"/>
+  <rect x="8" y="6" width="504" height="188" rx="18" fill="#f8f9fa" stroke="#dadce0" stroke-width="0.8"/>
   <rect x="26" y="16" width="120" height="28" rx="14" fill="#5f6368"/>
   <text class="t" x="86" y="30" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="800" fill="#fff">単体決算</text>
 
@@ -99,8 +109,8 @@
   <!-- Arrow 2 -->
   <line x1="292" y1="110" x2="358" y2="110" stroke="#5f6368" stroke-width="3" marker-end="url(#a)"/>
 
-  <!-- ── Stage 3: 個別FS (scale 0.78) ── -->
-  <g transform="translate(375, 60) scale(0.78)">
+  <!-- ── Stage 3: 個別FS (scale 0.85) ── -->
+  <g transform="translate(373, 58) scale(0.85)">
     <rect x="5" y="7" width="128" height="124" rx="8" fill="#e0e2e6" stroke="#dadce0" stroke-width="0.5"/>
     <rect x="3" y="4" width="128" height="124" rx="8" fill="#ecedef" stroke="#dadce0" stroke-width="0.5"/>
     <g filter="url(#s)">
@@ -122,32 +132,41 @@
   <text class="t" x="427" y="180" text-anchor="middle" font-size="15" font-weight="900" fill="#3c4043">帳簿から作成</text>
 
   <!-- ===== BOTTOM: 連結決算 ===== -->
-  <rect x="8" y="204" width="504" height="270" rx="18" fill="none" stroke="none"/>
+  <rect x="8" y="204" width="504" height="266" rx="18" fill="#f0f4ff" stroke="#d2ddf4" stroke-width="0.8"/>
   <rect x="26" y="216" width="120" height="28" rx="14" fill="#1a73e8"/>
   <text class="t" x="86" y="230" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="800" fill="#fff">連結決算</text>
 
-  <!-- 子会社A -->
-  <text class="t" x="121" y="286" text-anchor="end" font-size="17" font-weight="900" fill="#34a853">子会社A</text>
-  <g transform="translate(137, 266) scale(0.70) rotate(-10, 32.5, 32.5)" filter="url(#s)">
-    <use href="#pieceA" fill="#66bb6a" stroke="#34a853" stroke-width="2.2"/>
-  </g>
+  <!-- 子会社A — top row (3 pieces scattered) -->
+  <text class="t" x="95" y="284" text-anchor="end" font-size="17" font-weight="900" fill="#34a853">子会社A</text>
+  <g transform="translate(110, 260) scale(0.55) rotate(14, 32.5, 32.5)" filter="url(#s)">
+    <use href="#p00" fill="#66bb6a" stroke="#34a853" stroke-width="2.8"/></g>
+  <g transform="translate(170, 254) scale(0.55) rotate(-10, 32.5, 32.5)" filter="url(#s)">
+    <use href="#p10" fill="#66bb6a" stroke="#34a853" stroke-width="2.8"/></g>
+  <g transform="translate(230, 262) scale(0.55) rotate(6, 32.5, 32.5)" filter="url(#s)">
+    <use href="#p20" fill="#66bb6a" stroke="#34a853" stroke-width="2.8"/></g>
 
-  <!-- 子会社B -->
-  <text class="t" x="101" y="346" text-anchor="end" font-size="17" font-weight="900" fill="#34a853">子会社B</text>
-  <g transform="translate(115, 326) scale(0.70) rotate(5, 32.5, 32.5)" filter="url(#s)">
-    <use href="#pieceB" fill="#34a853" stroke="#2e7d32" stroke-width="2.2"/>
-  </g>
+  <!-- 子会社B — middle row (3 pieces scattered) -->
+  <text class="t" x="95" y="354" text-anchor="end" font-size="17" font-weight="900" fill="#34a853">子会社B</text>
+  <g transform="translate(110, 330) scale(0.55) rotate(-8, 32.5, 32.5)" filter="url(#s)">
+    <use href="#p01" fill="#34a853" stroke="#2e7d32" stroke-width="2.8"/></g>
+  <g transform="translate(170, 324) scale(0.55) rotate(12, 32.5, 32.5)" filter="url(#s)">
+    <use href="#p11" fill="#34a853" stroke="#2e7d32" stroke-width="2.8"/></g>
+  <g transform="translate(230, 332) scale(0.55) rotate(-5, 32.5, 32.5)" filter="url(#s)">
+    <use href="#p21" fill="#34a853" stroke="#2e7d32" stroke-width="2.8"/></g>
 
-  <!-- 親会社 -->
-  <text class="t" x="107" y="418" text-anchor="end" font-size="17" font-weight="900" fill="#1a73e8">親会社</text>
-  <g transform="translate(127, 398) scale(0.70) rotate(-8, 32.5, 32.5)" filter="url(#s)">
-    <use href="#pieceC" fill="#1565c0" stroke="#0d47a1" stroke-width="2.2"/>
-  </g>
+  <!-- 親会社 — bottom row (3 pieces scattered) -->
+  <text class="t" x="95" y="424" text-anchor="end" font-size="17" font-weight="900" fill="#1a73e8">親会社</text>
+  <g transform="translate(110, 400) scale(0.55) rotate(9, 32.5, 32.5)" filter="url(#s)">
+    <use href="#p02" fill="#1565c0" stroke="#0d47a1" stroke-width="2.8"/></g>
+  <g transform="translate(170, 394) scale(0.55) rotate(-12, 32.5, 32.5)" filter="url(#s)">
+    <use href="#p12" fill="#1565c0" stroke="#0d47a1" stroke-width="2.8"/></g>
+  <g transform="translate(230, 402) scale(0.55) rotate(4, 32.5, 32.5)" filter="url(#s)">
+    <use href="#p22" fill="#1565c0" stroke="#0d47a1" stroke-width="2.8"/></g>
 
-  <!-- Converging arrows -->
-  <path d="M193,286 C248,288 285,296 313,302" fill="none" stroke="#66bb6a" stroke-width="3" marker-end="url(#alg)"/>
-  <path d="M171,346 C232,346 282,347 313,348" fill="none" stroke="#34a853" stroke-width="3" marker-end="url(#ag)"/>
-  <path d="M179,420 C235,418 285,408 313,400" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#adb)"/>
+  <!-- Converging arrows (minimal) -->
+  <line x1="266" y1="278" x2="314" y2="290" stroke="#66bb6a" stroke-width="2" marker-end="url(#alg)"/>
+  <line x1="266" y1="348" x2="314" y2="348" stroke="#34a853" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="266" y1="418" x2="314" y2="406" stroke="#1565c0" stroke-width="2" marker-end="url(#adb)"/>
 
   <!-- Assembled puzzle board (scale 0.88) -->
   <g transform="translate(318, 262) scale(0.88)" filter="url(#s)">
@@ -164,23 +183,23 @@
 
     <!-- Horizontal seam 1 (y=65) -->
     <path d="M0,65 H25 C25,63 23,60 21,58 C19,56 19,54 19,53 C19,50 25,49 32.5,49 C40,49 46,50 46,53 C46,54 46,56 44,58 C42,60 40,63 40,65 H90 C90,67 88,70 86,72 C84,74 84,76 84,77 C84,80 90,81 97.5,81 C105,81 111,80 111,77 C111,76 111,74 109,72 C107,70 105,67 105,65 H155 C155,63 153,60 151,58 C149,56 149,54 149,53 C149,50 155,49 162.5,49 C170,49 176,50 176,53 C176,54 176,56 174,58 C172,60 170,63 170,65 H195"
-          fill="none" stroke="#fff" stroke-width="1.5" opacity="0.3"/>
+          fill="none" stroke="#fff" stroke-width="1.5" opacity="0.45"/>
 
     <!-- Horizontal seam 2 (y=130) -->
     <path d="M0,130 H25 C25,132 23,135 21,137 C19,139 19,141 19,142 C19,145 25,146 32.5,146 C40,146 46,145 46,142 C46,141 46,139 44,137 C42,135 40,132 40,130 H90 C90,128 88,125 86,123 C84,121 84,119 84,118 C84,115 90,114 97.5,114 C105,114 111,115 111,118 C111,119 111,121 109,123 C107,125 105,128 105,130 H155 C155,132 153,135 151,137 C149,139 149,141 149,142 C149,145 155,146 162.5,146 C170,146 176,145 176,142 C176,141 176,139 174,137 C172,135 170,132 170,130 H195"
-          fill="none" stroke="#fff" stroke-width="1.5" opacity="0.3"/>
+          fill="none" stroke="#fff" stroke-width="1.5" opacity="0.45"/>
 
     <!-- Left vertical seam (x=65) -->
     <path d="M65,0 V25 C63,25 60,23 58,21 C56,19 54,19 53,19 C50,19 49,25 49,32.5 C49,40 50,46 53,46 C54,46 56,46 58,44 C60,42 63,40 65,40 V90 C67,90 70,88 72,86 C74,84 76,84 77,84 C80,84 81,90 81,97.5 C81,105 80,111 77,111 C76,111 74,111 72,109 C70,107 67,105 65,105 V155 C63,155 60,153 58,151 C56,149 54,149 53,149 C50,149 49,155 49,162.5 C49,170 50,176 53,176 C54,176 56,176 58,174 C60,172 63,170 65,170 V195"
-          fill="none" stroke="#fff" stroke-width="1.5" opacity="0.3"/>
+          fill="none" stroke="#fff" stroke-width="1.5" opacity="0.45"/>
 
     <!-- Right vertical seam (x=130) -->
     <path d="M130,0 V25 C132,25 135,23 137,21 C139,19 141,19 142,19 C145,19 146,25 146,32.5 C146,40 145,46 142,46 C141,46 139,46 137,44 C135,42 132,40 130,40 V90 C128,90 125,88 123,86 C121,84 119,84 118,84 C115,84 114,90 114,97.5 C114,105 115,111 118,111 C119,111 121,111 123,109 C125,107 128,105 130,105 V155 C132,155 135,153 137,151 C139,149 141,149 142,149 C145,149 146,155 146,162.5 C146,170 145,176 142,176 C141,176 139,176 137,174 C135,172 132,170 130,170 V195"
-          fill="none" stroke="#fff" stroke-width="1.5" opacity="0.3"/>
+          fill="none" stroke="#fff" stroke-width="1.5" opacity="0.45"/>
 
     <text class="t" x="97" y="98" text-anchor="middle" dominant-baseline="middle"
           font-size="32" font-weight="900" fill="#fff">連結FS</text>
   </g>
-  <text class="t" x="404" y="458" text-anchor="middle" font-size="15" font-weight="900" fill="#3c4043">合算・修正して作成</text>
+  <text class="t" x="404" y="450" text-anchor="middle" font-size="15" font-weight="900" fill="#3c4043">合算・修正して作成</text>
 
 </svg>

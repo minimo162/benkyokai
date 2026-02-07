@@ -19,7 +19,7 @@
       <rect width="168" height="84" rx="6" fill="#fff" stroke="#1a73e8" stroke-width="1.6"/>
       <rect width="168" height="28" rx="6" fill="#1a73e8"/>
       <rect y="18" width="168" height="10" fill="#1a73e8"/>
-      <text class="t" x="84" y="14" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="800" fill="#fff">親会社 個別FS</text>
+      <text class="t" x="84" y="14" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="800" fill="#fff">親会社 個別FS</text>
       <rect x="14" y="38" width="56" height="5" rx="2" fill="#e8eef8"/>
       <rect x="78" y="38" width="74" height="5" rx="2" fill="#f1f3f4"/>
       <line x1="14" y1="50" x2="154" y2="50" stroke="#1a73e8" stroke-width="0.5" opacity="0.15"/>
@@ -35,7 +35,7 @@
       <rect width="168" height="84" rx="6" fill="#fff" stroke="#34a853" stroke-width="1.6"/>
       <rect width="168" height="28" rx="6" fill="#34a853"/>
       <rect y="18" width="168" height="10" fill="#34a853"/>
-      <text class="t" x="84" y="14" text-anchor="middle" dominant-baseline="middle" font-size="15" font-weight="800" fill="#fff">子会社 個別FS</text>
+      <text class="t" x="84" y="14" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="800" fill="#fff">子会社 個別FS</text>
       <rect x="14" y="38" width="56" height="5" rx="2" fill="#e6f4ea"/>
       <rect x="78" y="38" width="74" height="5" rx="2" fill="#f1f3f4"/>
       <line x1="14" y1="50" x2="154" y2="50" stroke="#34a853" stroke-width="0.5" opacity="0.15"/>
@@ -57,12 +57,12 @@
     <text class="t" x="42" y="38" text-anchor="middle" dominant-baseline="middle" font-size="20" font-weight="900" fill="#fff">1</text>
     <text class="t" x="80" y="38" dominant-baseline="middle" font-size="22" font-weight="900" fill="#3c4043">合算</text>
     <!-- Illustration: doc + doc → combined doc -->
-    <g transform="translate(200, 2)">
+    <g transform="translate(200, 5)">
       <rect x="0" y="2" width="46" height="60" rx="5" fill="#e8eef8" stroke="#1a73e8" stroke-width="1.4"/>
       <line x1="8" y1="16" x2="38" y2="16" stroke="#b8d0f0" stroke-width="1.4"/>
       <line x1="8" y1="26" x2="38" y2="26" stroke="#b8d0f0" stroke-width="1.4"/>
       <line x1="8" y1="36" x2="26" y2="36" stroke="#b8d0f0" stroke-width="1.4"/>
-      <text class="t" x="62" y="32" text-anchor="middle" font-size="26" font-weight="900" fill="#5f6368">+</text>
+      <text class="t" x="62" y="32" text-anchor="middle" dominant-baseline="middle" font-size="26" font-weight="900" fill="#5f6368">+</text>
       <rect x="78" y="2" width="46" height="60" rx="5" fill="#e6f4ea" stroke="#34a853" stroke-width="1.4"/>
       <line x1="86" y1="16" x2="116" y2="16" stroke="#a8dab5" stroke-width="1.4"/>
       <line x1="86" y1="26" x2="116" y2="26" stroke="#a8dab5" stroke-width="1.4"/>
@@ -88,7 +88,7 @@
     <text class="t" x="42" y="38" text-anchor="middle" dominant-baseline="middle" font-size="20" font-weight="900" fill="#fff">2</text>
     <text class="t" x="80" y="38" dominant-baseline="middle" font-size="22" font-weight="900" fill="#3c4043">修正</text>
     <!-- Illustration: doc (before) → arrow → doc (after) + cycle badge -->
-    <g transform="translate(200, 2)">
+    <g transform="translate(200, 5)">
       <!-- Before: document with highlighted rows needing adjustment -->
       <rect x="0" y="2" width="46" height="60" rx="5" fill="#fff" stroke="#5f6368" stroke-width="1.4"/>
       <line x1="8" y1="16" x2="38" y2="16" stroke="#e8eaed" stroke-width="1.4"/>
@@ -105,7 +105,7 @@
       <line x1="106" y1="34" x2="142" y2="34" stroke="#b8d0f0" stroke-width="1.4"/>
       <line x1="106" y1="44" x2="130" y2="44" stroke="#1a73e8" stroke-width="1.8"/>
       <!-- Pencil (edit/修正) — matching scrap_build style -->
-      <g transform="translate(172,30) scale(0.85) rotate(30)">
+      <g transform="translate(174,30) scale(1.0) rotate(30)">
         <rect x="-6" y="-30" width="12" height="54" rx="2" fill="#1a73e8" stroke="#1558b0" stroke-width="0.8"/>
         <rect x="-6" y="-30" width="12" height="10" rx="2" fill="#fbbc04"/>
         <polygon points="-6,24 6,24 0,34" fill="#ffcc80"/>
@@ -125,7 +125,7 @@
     <text class="t" x="42" y="38" text-anchor="middle" dominant-baseline="middle" font-size="20" font-weight="900" fill="#fff">3</text>
     <text class="t" x="80" y="38" dominant-baseline="middle" font-size="22" font-weight="900" fill="#3c4043">組替</text>
     <!-- Illustration: scattered items → organized disclosure-format table -->
-    <g transform="translate(192, 2)">
+    <g transform="translate(192, 4)">
       <!-- Before: loose, unordered bars (mixed colors/widths) -->
       <rect x="14" y="2" width="50" height="16" rx="4" fill="#dadce0"/>
       <rect x="0" y="26" width="32" height="14" rx="4" fill="#b8d0f0"/>
@@ -149,8 +149,8 @@
   <polygon points="280,426 274,418 286,418" fill="#5f6368"/>
 
   <!-- ===== RESULT: 連結財務諸表 ===== -->
-  <g transform="translate(100, 430)" filter="url(#s)">
-    <rect width="360" height="44" rx="22" fill="#34a853"/>
-    <text class="t" x="180" y="22" text-anchor="middle" dominant-baseline="middle" font-size="20" font-weight="800" fill="#fff">連結財務諸表</text>
+  <g transform="translate(170, 430)" filter="url(#s)">
+    <rect width="220" height="44" rx="22" fill="#1a73e8"/>
+    <text class="t" x="110" y="22" text-anchor="middle" dominant-baseline="middle" font-size="20" font-weight="800" fill="#fff">連結FS</text>
   </g>
 </svg>
