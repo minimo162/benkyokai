@@ -30,9 +30,9 @@
       <stop offset="0%" stop-color="#fff" stop-opacity="0.65"/>
       <stop offset="100%" stop-color="#c0e0ff" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="ca"><rect x="8" y="56" width="154" height="54" rx="27"/></clipPath>
-    <clipPath id="cb"><rect x="18" y="212" width="154" height="54" rx="27"/></clipPath>
-    <clipPath id="cc"><rect x="8" y="390" width="154" height="54" rx="27"/></clipPath>
+    <clipPath id="ca"><rect x="8" y="23" width="154" height="95" rx="14"/></clipPath>
+    <clipPath id="cb"><rect x="18" y="179" width="154" height="95" rx="14"/></clipPath>
+    <clipPath id="cc"><rect x="8" y="357" width="154" height="95" rx="14"/></clipPath>
     <clipPath id="cm"><rect x="288" y="50" width="216" height="396" rx="30"/></clipPath>
     <linearGradient id="ln" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#a0d4ff" stop-opacity="0.4"/>
@@ -50,39 +50,84 @@
 
   <!-- ===== Card A ===== -->
   <g filter="url(#sh-sm)">
-    <rect x="8" y="56" width="154" height="54" rx="27" fill="url(#g-sm)"/>
-    <rect x="8" y="56" width="154" height="54" rx="27" fill="none" stroke="url(#edge)" stroke-width="1.8"/>
+    <rect x="8" y="23" width="154" height="95" rx="14" fill="url(#g-sm)"/>
+    <rect x="8" y="23" width="154" height="95" rx="14" fill="none" stroke="url(#edge)" stroke-width="1.8"/>
   </g>
   <g clip-path="url(#ca)">
-    <ellipse cx="85" cy="46" rx="120" ry="40" fill="url(#spec)"/>
+    <ellipse cx="85" cy="13" rx="120" ry="40" fill="url(#spec)"/>
+    <!-- Sheet-style rows -->
+    <rect x="20" y="78" width="130" height="12" rx="3" fill="rgba(255,255,255,0.28)"/>
+    <rect x="22" y="81" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="54" y="81" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="86" y="81" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="118" y="81" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <line x1="20" y1="90" x2="150" y2="90" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <rect x="22" y="95" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="54" y="95" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="86" y="95" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="118" y="95" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="22" y="105" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="54" y="105" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="86" y="105" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="118" y="105" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
   </g>
-  <rect x="42" y="59" width="86" height="1.5" rx="0.75" fill="rgba(255,255,255,0.92)"/>
-  <text x="85" y="77" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="rgba(0,0,0,0.55)" letter-spacing="0.08em">子会社</text>
-  <text x="85" y="96" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="22" font-weight="700" fill="rgba(0,0,0,0.62)">A社</text>
+  <rect x="42" y="26" width="86" height="1.5" rx="0.75" fill="rgba(255,255,255,0.92)"/>
+  <text x="85" y="48" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="rgba(0,0,0,0.55)" letter-spacing="0.08em">子会社</text>
+  <text x="85" y="68" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="22" font-weight="700" fill="rgba(0,0,0,0.62)">A社</text>
 
   <!-- ===== Card B ===== -->
   <g filter="url(#sh-sm)">
-    <rect x="18" y="212" width="154" height="54" rx="27" fill="url(#g-sm)"/>
-    <rect x="18" y="212" width="154" height="54" rx="27" fill="none" stroke="url(#edge)" stroke-width="1.8"/>
+    <rect x="18" y="179" width="154" height="95" rx="14" fill="url(#g-sm)"/>
+    <rect x="18" y="179" width="154" height="95" rx="14" fill="none" stroke="url(#edge)" stroke-width="1.8"/>
   </g>
   <g clip-path="url(#cb)">
-    <ellipse cx="95" cy="202" rx="120" ry="40" fill="url(#spec)"/>
+    <ellipse cx="95" cy="169" rx="120" ry="40" fill="url(#spec)"/>
+    <!-- Sheet-style rows -->
+    <rect x="30" y="234" width="130" height="12" rx="3" fill="rgba(255,255,255,0.28)"/>
+    <rect x="32" y="237" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="64" y="237" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="96" y="237" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="128" y="237" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <line x1="30" y1="246" x2="160" y2="246" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <rect x="32" y="251" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="64" y="251" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="96" y="251" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="128" y="251" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="32" y="261" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="64" y="261" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="96" y="261" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="128" y="261" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
   </g>
-  <rect x="52" y="215" width="86" height="1.5" rx="0.75" fill="rgba(255,255,255,0.92)"/>
-  <text x="95" y="233" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="rgba(0,0,0,0.55)" letter-spacing="0.08em">子会社</text>
-  <text x="95" y="252" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="22" font-weight="700" fill="rgba(0,0,0,0.62)">B社</text>
+  <rect x="52" y="182" width="86" height="1.5" rx="0.75" fill="rgba(255,255,255,0.92)"/>
+  <text x="95" y="204" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="rgba(0,0,0,0.55)" letter-spacing="0.08em">子会社</text>
+  <text x="95" y="224" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="22" font-weight="700" fill="rgba(0,0,0,0.62)">B社</text>
 
   <!-- ===== Card C ===== -->
   <g filter="url(#sh-sm)">
-    <rect x="8" y="390" width="154" height="54" rx="27" fill="url(#g-sm)"/>
-    <rect x="8" y="390" width="154" height="54" rx="27" fill="none" stroke="url(#edge)" stroke-width="1.8"/>
+    <rect x="8" y="357" width="154" height="95" rx="14" fill="url(#g-sm)"/>
+    <rect x="8" y="357" width="154" height="95" rx="14" fill="none" stroke="url(#edge)" stroke-width="1.8"/>
   </g>
   <g clip-path="url(#cc)">
-    <ellipse cx="85" cy="380" rx="120" ry="40" fill="url(#spec)"/>
+    <ellipse cx="85" cy="347" rx="120" ry="40" fill="url(#spec)"/>
+    <!-- Sheet-style rows -->
+    <rect x="20" y="412" width="130" height="12" rx="3" fill="rgba(255,255,255,0.28)"/>
+    <rect x="22" y="415" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="54" y="415" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="86" y="415" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="118" y="415" width="28" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <line x1="20" y1="424" x2="150" y2="424" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <rect x="22" y="429" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="54" y="429" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="86" y="429" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="118" y="429" width="22" height="5" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <rect x="22" y="439" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="54" y="439" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="86" y="439" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="118" y="439" width="22" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
   </g>
-  <rect x="42" y="393" width="86" height="1.5" rx="0.75" fill="rgba(255,255,255,0.92)"/>
-  <text x="85" y="411" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="rgba(0,0,0,0.55)" letter-spacing="0.08em">子会社</text>
-  <text x="85" y="430" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="22" font-weight="700" fill="rgba(0,0,0,0.62)">C社</text>
+  <rect x="42" y="360" width="86" height="1.5" rx="0.75" fill="rgba(255,255,255,0.92)"/>
+  <text x="85" y="382" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="rgba(0,0,0,0.55)" letter-spacing="0.08em">子会社</text>
+  <text x="85" y="402" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="22" font-weight="700" fill="rgba(0,0,0,0.62)">C社</text>
 
   <!-- ===== Consolidated card ===== -->
   <g filter="url(#sh-lg)">
@@ -111,8 +156,8 @@
   <rect x="440" y="130" width="30" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
 
   <!-- Labels -->
-  <text x="396" y="188" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="14" font-weight="500" fill="rgba(0,0,0,0.35)" letter-spacing="0.08em">連結</text>
-  <text x="396" y="232" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="30" font-weight="700" letter-spacing="0.03em" fill="rgba(0,0,0,0.62)">グループ</text>
+  <text x="396" y="188" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="14" font-weight="500" fill="rgba(0,0,0,0.35)" letter-spacing="0.08em">グループ</text>
+  <text x="396" y="232" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="30" font-weight="700" letter-spacing="0.03em" fill="rgba(0,0,0,0.62)">連結</text>
   <text x="396" y="270" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="30" font-weight="700" letter-spacing="0.03em" fill="rgba(0,0,0,0.62)">決算</text>
 
   <!-- Divider -->
