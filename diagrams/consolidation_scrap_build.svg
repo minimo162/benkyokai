@@ -10,23 +10,23 @@
 
   <!-- All three arcs share circle: center(280,240) R=185 -->
   <g transform="translate(0,8)">
-  <!-- ====== ARROWS on shared circle ====== -->
+  <!-- ====== ARROWS on shared circle (unified neutral gray) ====== -->
 
-  <!-- Blue: top → bottom-right  (20° → 105° clockwise) -->
-  <path d="M343,66 A185,185 0 0 1 459,288" fill="none" stroke="#1a73e8" stroke-width="5.5"/>
+  <!-- Arc: top → bottom-right  (20° → 105° clockwise) -->
+  <path d="M343,66 A185,185 0 0 1 459,288" fill="none" stroke="#5f6368" stroke-width="5.5"/>
 
-  <!-- Red: bottom-right → bottom-left  (140° → 220° clockwise) -->
-  <path d="M399,382 A185,185 0 0 1 161,382" fill="none" stroke="#ea4335" stroke-width="5.5"/>
+  <!-- Arc: bottom-right → bottom-left  (140° → 220° clockwise) -->
+  <path d="M399,382 A185,185 0 0 1 161,382" fill="none" stroke="#5f6368" stroke-width="5.5"/>
 
-  <!-- Green: bottom-left → top  (255° → 340° clockwise) -->
-  <path d="M101,288 A185,185 0 0 1 217,66" fill="none" stroke="#34a853" stroke-width="5.5"/>
+  <!-- Arc: bottom-left → top  (255° → 340° clockwise) -->
+  <path d="M101,288 A185,185 0 0 1 217,66" fill="none" stroke="#5f6368" stroke-width="5.5"/>
 
   <!-- ====== ICONS + CAPTIONS ====== -->
 
   <!-- 開始仕訳 — top: two ledger books with carry-forward arrow -->
   <g>
-    <rect x="178" y="22" width="204" height="108" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
-    <g transform="translate(280,56) scale(1.15)">
+    <rect x="168" y="18" width="224" height="116" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
+    <g transform="translate(280,54) scale(1.2)">
       <!-- Previous period ledger (faded) -->
       <g opacity="0.38">
         <rect x="-62" y="-28" width="42" height="54" rx="3" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2"/>
@@ -45,13 +45,13 @@
       <line x1="42" y1="0" x2="62" y2="0" stroke="#c8e6c9" stroke-width="3"/>
       <line x1="42" y1="12" x2="58" y2="12" stroke="#c8e6c9" stroke-width="3"/>
     </g>
-    <text class="t" x="285" y="110" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="700" fill="#34a853">開始仕訳（引き継ぎ）</text>
+    <text class="t" x="280" y="114" text-anchor="middle" dominant-baseline="middle" font-size="20" font-weight="700" fill="#34a853">開始仕訳（引き継ぎ）</text>
   </g>
 
   <!-- 当期の修正 — bottom-right: document with large pencil editing -->
   <g>
-    <rect x="355" y="280" width="170" height="105" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
-    <g transform="translate(440,310) scale(1.12)">
+    <rect x="343" y="278" width="190" height="120" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
+    <g transform="translate(438,312) scale(1.2)">
       <!-- Document with folded corner -->
       <rect x="-28" y="-30" width="48" height="60" rx="4" fill="#fff" stroke="#1a73e8" stroke-width="2.5"/>
       <path d="M8,-30 L20,-30 L20,-18 Z" fill="#e3f2fd" stroke="#1a73e8" stroke-width="1.2" stroke-linejoin="round"/>
@@ -68,13 +68,13 @@
         <polygon points="-1.5,33 1.5,33 0,36" fill="#3c4043"/>
       </g>
     </g>
-    <text class="t" x="440" y="376" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="700" fill="#1a73e8">当期の修正</text>
+    <text class="t" x="438" y="386" text-anchor="middle" dominant-baseline="middle" font-size="20" font-weight="700" fill="#1a73e8">当期の修正</text>
   </g>
 
   <!-- 解散（リセット） — bottom-left: document with prohibition sign -->
   <g>
-    <rect x="35" y="280" width="170" height="105" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
-    <g transform="translate(120,310) scale(1.12)">
+    <rect x="23" y="278" width="190" height="120" rx="8" fill="#fff" stroke="none" filter="url(#s)"/>
+    <g transform="translate(118,312) scale(1.2)">
       <!-- Document (faded, being discarded) -->
       <g opacity="0.5">
         <rect x="-24" y="-30" width="48" height="60" rx="4" fill="#fff" stroke="#d32f2f" stroke-width="2.2"/>
@@ -86,20 +86,22 @@
       <circle cx="0" cy="0" r="28" fill="none" stroke="#ea4335" stroke-width="4"/>
       <line x1="-20" y1="20" x2="20" y2="-20" stroke="#ea4335" stroke-width="4" stroke-linecap="round"/>
     </g>
-    <text class="t" x="125" y="376" text-anchor="middle" dominant-baseline="middle" font-size="17" font-weight="700" fill="#ea4335">解散（リセット）</text>
+    <text class="t" x="118" y="386" text-anchor="middle" dominant-baseline="middle" font-size="20" font-weight="700" fill="#ea4335">解散（リセット）</text>
   </g>
 
   <!-- ====== CENTER BADGE ====== -->
-  <rect x="145" y="220" width="270" height="40" rx="20" fill="#1a73e8" filter="url(#s)"/>
-  <text class="t" x="280" y="240" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="900" fill="#fff">毎期スクラップ&amp;ビルド</text>
+  <rect x="155" y="218" width="250" height="44" rx="22" fill="#1a73e8" filter="url(#s)"/>
+  <text class="t" x="280" y="240" text-anchor="middle" dominant-baseline="middle" font-size="18" font-weight="900" fill="#fff">スクラップ&amp;ビルド</text>
 
-  <!-- ====== DIRECTION TRIANGLES at visible-arc midpoints (on top of everything) ====== -->
-  <!-- Visible blue: midpoint shifted to 70° → (454,177) -->
-  <polygon points="-22,-16 -22,16 22,0" transform="translate(454,177) rotate(70)" fill="#1a73e8"/>
-  <!-- Visible red: midpoint shifted to 182° → (274,425) -->
-  <polygon points="-22,-16 -22,16 22,0" transform="translate(274,425) rotate(182)" fill="#ea4335"/>
-  <!-- Visible green: midpoint shifted to 294° → (111,165) -->
-  <polygon points="-22,-16 -22,16 22,0" transform="translate(111,165) rotate(294)" fill="#34a853"/>
+  <!-- ====== DIRECTION TRIANGLES (unified neutral gray) ====== -->
+  <polygon points="-22,-16 -22,16 22,0" transform="translate(454,177) rotate(70)" fill="#5f6368"/>
+  <polygon points="-22,-16 -22,16 22,0" transform="translate(274,425) rotate(182)" fill="#5f6368"/>
+  <polygon points="-22,-16 -22,16 22,0" transform="translate(111,165) rotate(294)" fill="#5f6368"/>
+
+  <!-- ====== STEP NUMBERS (top-left of each node card) ====== -->
+  <text class="t" x="180" y="38" text-anchor="middle" dominant-baseline="middle" font-size="24" font-weight="900" fill="#34a853">①</text>
+  <text class="t" x="355" y="298" text-anchor="middle" dominant-baseline="middle" font-size="24" font-weight="900" fill="#1a73e8">②</text>
+  <text class="t" x="35" y="298" text-anchor="middle" dominant-baseline="middle" font-size="24" font-weight="900" fill="#ea4335">③</text>
   </g>
 
 </svg>

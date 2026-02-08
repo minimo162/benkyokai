@@ -1,95 +1,134 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="520" viewBox="0 0 480 520">
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="0 0 520 520">
   <defs>
-    <filter id="cardShadow">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#202124" flood-opacity="0.12"/>
+    <filter id="sh-sm" x="-25%" y="-15%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="rgba(20,60,140,0.18)"/>
     </filter>
-    <filter id="mainShadow">
-      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#202124" flood-opacity="0.15"/>
+    <filter id="sh-lg" x="-20%" y="-12%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="22" flood-color="rgba(20,60,140,0.22)"/>
     </filter>
-    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#4a9af5"/>
-      <stop offset="1" stop-color="#1a73e8"/>
+    <linearGradient id="g-sm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.92"/>
+      <stop offset="35%" stop-color="#d8eeff" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#b0d8f8" stop-opacity="0.45"/>
     </linearGradient>
-    <linearGradient id="redGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f28b82"/>
-      <stop offset="1" stop-color="#ea4335"/>
+    <linearGradient id="g-lg" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.85"/>
+      <stop offset="30%" stop-color="#d0e8ff" stop-opacity="0.52"/>
+      <stop offset="100%" stop-color="#a0d0f0" stop-opacity="0.35"/>
     </linearGradient>
-    <linearGradient id="yellowGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fdd663"/>
-      <stop offset="1" stop-color="#fbbc04"/>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="25%" stop-color="#c8e4ff" stop-opacity="0.7"/>
+      <stop offset="75%" stop-color="#90c8f0" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.8"/>
     </linearGradient>
-    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#57c97a"/>
-      <stop offset="1" stop-color="#34a853"/>
+    <linearGradient id="spec" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#d0e8ff" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="consolidatedGrad" x1="0" y1="0" x2="0.6" y2="1">
-      <stop offset="0" stop-color="#1a73e8"/>
-      <stop offset="1" stop-color="#1558b0"/>
+    <linearGradient id="spec-lg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#c0e0ff" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="roundClip"><rect width="480" height="520" rx="0"/></clipPath>
+    <clipPath id="ca"><rect x="8" y="56" width="154" height="54" rx="27"/></clipPath>
+    <clipPath id="cb"><rect x="18" y="212" width="154" height="54" rx="27"/></clipPath>
+    <clipPath id="cc"><rect x="8" y="390" width="154" height="54" rx="27"/></clipPath>
+    <clipPath id="cm"><rect x="288" y="50" width="216" height="396" rx="30"/></clipPath>
+    <linearGradient id="ln" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a0d4ff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#e0f0ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#a0d4ff" stop-opacity="0.4"/>
+    </linearGradient>
   </defs>
 
-  <!-- Subsidiary cards (left side) -->
+  <!-- Connecting curves -->
+  <path d="M162,83 Q226,83 250,166 Q272,244 284,248" fill="none" stroke="url(#ln)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M172,239 Q218,239 250,241 Q268,242 284,244" fill="none" stroke="url(#ln)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M162,417 Q226,417 250,334 Q272,256 284,252" fill="none" stroke="url(#ln)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="285" cy="248" r="3.5" fill="rgba(160,212,255,0.6)"/>
+  <circle cx="285" cy="252" r="3.5" fill="rgba(160,212,255,0.6)"/>
 
-  <!-- Card A (red) -->
-  <g filter="url(#cardShadow)">
-    <rect x="50" y="72" width="130" height="80" rx="14" fill="url(#redGrad)"/>
-    <text x="115" y="104" text-anchor="middle" font-family="Google Sans, Noto Sans JP, sans-serif" font-size="11.5" font-weight="600" fill="rgba(255,255,255,0.92)">子会社</text>
-    <text x="115" y="124" text-anchor="middle" font-family="Google Sans, Noto Sans JP, sans-serif" font-size="16" font-weight="800" fill="#fff">A社</text>
+  <!-- ===== Card A ===== -->
+  <g filter="url(#sh-sm)">
+    <rect x="8" y="56" width="154" height="54" rx="27" fill="url(#g-sm)"/>
+    <rect x="8" y="56" width="154" height="54" rx="27" fill="none" stroke="url(#edge)" stroke-width="1.8"/>
   </g>
-
-  <!-- Card B (yellow) -->
-  <g filter="url(#cardShadow)">
-    <rect x="50" y="192" width="130" height="80" rx="14" fill="url(#yellowGrad)"/>
-    <text x="115" y="224" text-anchor="middle" font-family="Google Sans, Noto Sans JP, sans-serif" font-size="11.5" font-weight="600" fill="rgba(0,0,0,0.6)">子会社</text>
-    <text x="115" y="244" text-anchor="middle" font-family="Google Sans, Noto Sans JP, sans-serif" font-size="16" font-weight="800" fill="rgba(0,0,0,0.7)">B社</text>
+  <g clip-path="url(#ca)">
+    <ellipse cx="85" cy="46" rx="120" ry="40" fill="url(#spec)"/>
   </g>
+  <rect x="42" y="59" width="86" height="1.5" rx="0.75" fill="rgba(255,255,255,0.92)"/>
+  <text x="85" y="77" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="rgba(0,0,0,0.55)" letter-spacing="0.08em">子会社</text>
+  <text x="85" y="96" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="22" font-weight="700" fill="rgba(0,0,0,0.62)">A社</text>
 
-  <!-- Card C (green) -->
-  <g filter="url(#cardShadow)">
-    <rect x="50" y="312" width="130" height="80" rx="14" fill="url(#greenGrad)"/>
-    <text x="115" y="344" text-anchor="middle" font-family="Google Sans, Noto Sans JP, sans-serif" font-size="11.5" font-weight="600" fill="rgba(255,255,255,0.92)">子会社</text>
-    <text x="115" y="364" text-anchor="middle" font-family="Google Sans, Noto Sans JP, sans-serif" font-size="16" font-weight="800" fill="#fff">C社</text>
+  <!-- ===== Card B ===== -->
+  <g filter="url(#sh-sm)">
+    <rect x="18" y="212" width="154" height="54" rx="27" fill="url(#g-sm)"/>
+    <rect x="18" y="212" width="154" height="54" rx="27" fill="none" stroke="url(#edge)" stroke-width="1.8"/>
   </g>
-
-  <!-- Flow arrows -->
-  <!-- Arrow from A -->
-  <path d="M180,112 C222,112 234,218 266,218" fill="none" stroke="#5f6368" stroke-width="3.2" stroke-dasharray="6,4" opacity="0.9"/>
-  <polygon points="263,212 278,218 263,224" fill="#5f6368" opacity="0.9"/>
-
-  <!-- Arrow from B (straight) -->
-  <path d="M180,232 L266,232" fill="none" stroke="#5f6368" stroke-width="3.2" stroke-dasharray="6,4" opacity="0.9"/>
-  <polygon points="263,226 278,232 263,238" fill="#5f6368" opacity="0.9"/>
-
-  <!-- Arrow from C -->
-  <path d="M180,352 C222,352 234,246 266,246" fill="none" stroke="#5f6368" stroke-width="3.2" stroke-dasharray="6,4" opacity="0.9"/>
-  <polygon points="263,240 278,246 263,252" fill="#5f6368" opacity="0.9"/>
-
-  <!-- Consolidated (large card, right side) -->
-  <g filter="url(#mainShadow)">
-    <rect x="280" y="130" width="168" height="204" rx="18" fill="url(#consolidatedGrad)"/>
-
-    <!-- Accent stripe at top -->
-    <rect x="280" y="130" width="168" height="7" rx="3.5" fill="rgba(255,255,255,0.18)"/>
-
-    <!-- 4-color dot row -->
-    <circle cx="334" cy="168" r="6" fill="#ea4335" opacity="0.9"/>
-    <circle cx="352" cy="168" r="6" fill="#fbbc04" opacity="0.9"/>
-    <circle cx="370" cy="168" r="6" fill="#34a853" opacity="0.9"/>
-    <circle cx="388" cy="168" r="6" fill="#ffffff" opacity="0.5"/>
-
-    <text x="364" y="218" text-anchor="middle" font-family="Google Sans, Noto Sans JP, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.8)">連結</text>
-    <text x="364" y="246" text-anchor="middle" font-family="Google Sans, Noto Sans JP, sans-serif" font-size="22" font-weight="800" fill="#fff">グループ</text>
-    <text x="364" y="273" text-anchor="middle" font-family="Google Sans, Noto Sans JP, sans-serif" font-size="22" font-weight="800" fill="#fff">決算</text>
-
-    <!-- Horizontal rule -->
-    <line x1="314" y1="292" x2="414" y2="292" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
-
-    <!-- Bottom icon row (mini bar chart) -->
-    <rect x="330" y="306" width="12" height="12" rx="2" fill="rgba(255,255,255,0.35)"/>
-    <rect x="348" y="300" width="12" height="18" rx="2" fill="rgba(255,255,255,0.45)"/>
-    <rect x="366" y="294" width="12" height="24" rx="2" fill="rgba(255,255,255,0.55)"/>
-    <rect x="384" y="298" width="12" height="20" rx="2" fill="rgba(255,255,255,0.45)"/>
+  <g clip-path="url(#cb)">
+    <ellipse cx="95" cy="202" rx="120" ry="40" fill="url(#spec)"/>
   </g>
+  <rect x="52" y="215" width="86" height="1.5" rx="0.75" fill="rgba(255,255,255,0.92)"/>
+  <text x="95" y="233" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="rgba(0,0,0,0.55)" letter-spacing="0.08em">子会社</text>
+  <text x="95" y="252" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="22" font-weight="700" fill="rgba(0,0,0,0.62)">B社</text>
 
+  <!-- ===== Card C ===== -->
+  <g filter="url(#sh-sm)">
+    <rect x="8" y="390" width="154" height="54" rx="27" fill="url(#g-sm)"/>
+    <rect x="8" y="390" width="154" height="54" rx="27" fill="none" stroke="url(#edge)" stroke-width="1.8"/>
+  </g>
+  <g clip-path="url(#cc)">
+    <ellipse cx="85" cy="380" rx="120" ry="40" fill="url(#spec)"/>
+  </g>
+  <rect x="42" y="393" width="86" height="1.5" rx="0.75" fill="rgba(255,255,255,0.92)"/>
+  <text x="85" y="411" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="rgba(0,0,0,0.55)" letter-spacing="0.08em">子会社</text>
+  <text x="85" y="430" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="22" font-weight="700" fill="rgba(0,0,0,0.62)">C社</text>
+
+  <!-- ===== Consolidated card ===== -->
+  <g filter="url(#sh-lg)">
+    <rect x="288" y="50" width="216" height="396" rx="30" fill="url(#g-lg)"/>
+    <rect x="288" y="50" width="216" height="396" rx="30" fill="none" stroke="url(#edge)" stroke-width="1.8"/>
+  </g>
+  <g clip-path="url(#cm)">
+    <ellipse cx="396" cy="22" rx="155" ry="88" fill="url(#spec-lg)"/>
+  </g>
+  <rect x="334" y="56" width="126" height="2" rx="1" fill="rgba(255,255,255,0.88)"/>
+
+  <!-- Sheet-style header rows -->
+  <rect x="310" y="100" width="172" height="14" rx="3" fill="rgba(255,255,255,0.28)"/>
+  <rect x="314" y="103" width="38" height="8" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <rect x="356" y="103" width="38" height="8" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <rect x="398" y="103" width="38" height="8" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <rect x="440" y="103" width="38" height="8" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <line x1="310" y1="114" x2="482" y2="114" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <rect x="314" y="119" width="30" height="6" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="356" y="119" width="30" height="6" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="398" y="119" width="30" height="6" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="440" y="119" width="30" height="6" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="314" y="130" width="30" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="356" y="130" width="30" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="398" y="130" width="30" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="440" y="130" width="30" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Labels -->
+  <text x="396" y="188" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="14" font-weight="500" fill="rgba(0,0,0,0.35)" letter-spacing="0.08em">連結</text>
+  <text x="396" y="232" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="30" font-weight="700" letter-spacing="0.03em" fill="rgba(0,0,0,0.62)">グループ</text>
+  <text x="396" y="270" text-anchor="middle" font-family="-apple-system, 'SF Pro Display', 'Noto Sans JP', sans-serif" font-size="30" font-weight="700" letter-spacing="0.03em" fill="rgba(0,0,0,0.62)">決算</text>
+
+  <!-- Divider -->
+  <line x1="340" y1="292" x2="452" y2="292" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+
+  <!-- Bar chart (right-ascending) -->
+  <rect x="332" y="334" width="22" height="24" rx="9" fill="rgba(255,255,255,0.40)"/>
+  <rect x="358" y="326" width="22" height="32" rx="9" fill="rgba(255,255,255,0.45)"/>
+  <rect x="384" y="316" width="22" height="42" rx="9" fill="rgba(255,255,255,0.55)"/>
+  <rect x="410" y="306" width="22" height="52" rx="9" fill="rgba(255,255,255,0.65)"/>
+  <rect x="436" y="294" width="22" height="64" rx="9" fill="rgba(255,255,255,0.75)"/>
+
+  <!-- Bar highlights -->
+  <rect x="336" y="335" width="14" height="1.5" rx="0.75" fill="rgba(255,255,255,0.75)"/>
+  <rect x="362" y="327" width="14" height="1.5" rx="0.75" fill="rgba(255,255,255,0.75)"/>
+  <rect x="388" y="317" width="14" height="1.5" rx="0.75" fill="rgba(255,255,255,0.75)"/>
+  <rect x="414" y="307" width="14" height="1.5" rx="0.75" fill="rgba(255,255,255,0.75)"/>
+  <rect x="440" y="295" width="14" height="1.5" rx="0.75" fill="rgba(255,255,255,0.75)"/>
 </svg>
